@@ -1,6 +1,6 @@
 # Lecciones
 
-Hallazgos medidos construyendo y usando Embudo. Cada uno salió de un error real con costo real, no de leer documentación.
+Hallazgos medidos construyendo y usando applyOS. Cada uno salió de un error real con costo real, no de leer documentación.
 
 El más caro de todos se descubrió auditando el sistema contra una búsqueda manual. 24 avisos recolectados a mano se cruzaron contra lo que el barrido automático había encontrado el mismo día.
 

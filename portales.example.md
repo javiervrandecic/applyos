@@ -2,7 +2,7 @@
 
 Copia a `portales.md` y ajusta a tu país. La skill lee este archivo para saber dónde barrer.
 
-Embudo nació con portales de Chile, pero la arquitectura no depende de eso. Cambias las fuentes y funciona igual.
+applyOS nació con portales de Chile, pero la arquitectura no depende de eso. Cambias las fuentes y funciona igual.
 
 ---
 

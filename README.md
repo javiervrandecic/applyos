@@ -1,8 +1,10 @@
-# Embudo
+# applyOS
 
 Sistema de búsqueda de empleo asistido por IA. Barre varios portales, analiza el calce real de cada aviso contra tu perfil leyendo la descripción completa en vez del título, y te entrega un reporte en formato embudo para saber en qué etapa se te cae cada proceso.
 
 Corre sobre [Claude Code](https://claude.com/claude-code) como skill, más un par de scripts en Node y PowerShell.
+
+> **applyOS es la plantilla pública.** Mi instancia personal la llamo Embudo y es privada, porque adentro está mi perfil real y todos mis procesos. Lo que se comparte acá es el sistema, no mis datos.
 
 > **Por qué existe.** Buscar trabajo a mano no escala. Revisar 600 avisos, decidir cuáles valen la pena y adaptar el CV a cada uno es un trabajo de tiempo completo sin sueldo. Y peor, lo haces a ciegas. no sabes si el problema es tu perfil, el mercado o el canal.
 
@@ -28,7 +30,7 @@ Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con
 
 **Barre los portales.** Get on Board vía API, LinkedIn, Computrabajo y ChileTrabajos. Configurable.
 
-**Ignora el título del aviso.** Los títulos son un desastre. En un barrido real aparecieron más de 10 nombres distintos para funciones casi idénticas (AI Specialist, Forward Deployed Engineer, GTM Engineer, Automation Engineer, AI Solutions Lead), con sueldos de USD 1.500 a 5.000 al mes sin ningún patrón. Filtrar por título te hace perder la mitad de lo que te sirve. Embudo lee la descripción completa.
+**Ignora el título del aviso.** Los títulos son un desastre. En un barrido real aparecieron más de 10 nombres distintos para funciones casi idénticas (AI Specialist, Forward Deployed Engineer, GTM Engineer, Automation Engineer, AI Solutions Lead), con sueldos de USD 1.500 a 5.000 al mes sin ningún patrón. Filtrar por título te hace perder la mitad de lo que te sirve. applyOS lee la descripción completa.
 
 **Verifica en dos niveles.** Descartar todo por título es rápido y caro. En una prueba, de 24 avisos descartados solo por el título, 3 escondían un calce real. Por eso hay una regla explícita de qué se puede descartar sin abrir y qué obliga a leer el detalle.
 
@@ -54,8 +56,8 @@ No necesitas llaves de API. Todas las fuentes que usa son endpoints públicos.
 ## Instalación
 
 ```bash
-git clone https://github.com/<tu-usuario>/embudo.git
-cd embudo
+git clone https://github.com/<tu-usuario>/applyos.git
+cd applyos
 
 cp perfil.example.md    perfil.md
 cp portales.example.md  portales.md
@@ -96,7 +98,7 @@ node scripts/dashboard-pdf.js dashboard/embudo.html embudo.pdf
 ## Estructura
 
 ```
-embudo/
+applyos/
 ├─ skill/empleos.md          la skill de Claude Code
 ├─ perfil.example.md         plantilla de perfil       → copiar a perfil.md
 ├─ portales.example.md       portales por país         → copiar a portales.md
