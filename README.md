@@ -8,6 +8,22 @@ Corre sobre [Claude Code](https://claude.com/claude-code) como skill, más un pa
 
 ---
 
+## El barrido
+
+Un término, 59 avisos únicos, deduplicados y ordenados por fecha. Sin llaves de API.
+
+![Salida del barrido de Get on Board](docs/barrido.png)
+
+## El reporte de embudo
+
+Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con los días sin movimiento y la próxima acción de cada proceso. Se exporta a PDF.
+
+![Dashboard del embudo](docs/dashboard.png)
+
+*(Datos de ejemplo.)*
+
+---
+
 ## Qué hace
 
 **Barre los portales.** Get on Board vía API, LinkedIn, Computrabajo y ChileTrabajos. Configurable.
