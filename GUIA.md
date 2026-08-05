@@ -164,7 +164,19 @@ La primera vez va a demorar varios minutos. Barre los portales, deduplica, verif
 
 Cuando te muestre los resultados, respondes con el número. Va a leer el aviso completo, hacer el análisis de calce a fondo con los huecos reales, y si le dices que sí, genera el CV adaptado.
 
-## 11. El reporte de embudo
+## 11. Cuando te llamen a entrevista
+
+Acá empieza la mitad que ninguna herramienta cubre y donde de verdad se decide si consigues el trabajo.
+
+**Antes.** Lee [`entrevistas/PREPARACION.md`](entrevistas/PREPARACION.md) completo. Sí, cada vez.
+
+**Durante.** Deja la grabación corriendo. Como casi nunca eres el administrador de la reunión, la grabación de la plataforma no está disponible para ti. [`entrevistas/GRABACION.md`](entrevistas/GRABACION.md) explica cómo grabar tu micrófono y el audio del escritorio en pistas separadas, que además te ahorra tener que diarizar después.
+
+**Después.** Aplica [`entrevistas/EVALUACION.md`](entrevistas/EVALUACION.md) el mismo día, con el transcript en mano. Los hallazgos que se repitan entre entrevistas van a `entrevistas/LECCIONES-ENTREVISTAS.md`, que se lee antes de la siguiente.
+
+Ese ciclo es lo que convierte una serie de entrevistas perdidas en una curva de aprendizaje.
+
+## 12. El reporte de embudo
 
 Cada tantos días:
 

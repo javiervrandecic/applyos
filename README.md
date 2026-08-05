@@ -8,7 +8,7 @@ Corre sobre [Claude Code](https://claude.com/claude-code) como skill, más un pa
 
 > **Por qué existe.** Buscar trabajo a mano no escala. Revisar 600 avisos, decidir cuáles valen la pena y adaptar el CV a cada uno es un trabajo de tiempo completo sin sueldo. Y peor, lo haces a ciegas. no sabes si el problema es tu perfil, el mercado o el canal.
 
-### 👉 [Empieza acá: guía paso a paso](GUIA.md)
+### 👉 [Empieza acá: guía paso a paso](GUIA.md)  ·  [Requisitos](REQUISITOS.md)
 
 ---
 
@@ -116,6 +116,8 @@ node scripts/dashboard-pdf.js dashboard/embudo.html embudo.pdf
 ```
 applyos/
 ├─ GUIA.md                   guia paso a paso, empieza aca
+├─ REQUISITOS.md             software, hardware y costos reales
+├─ perfil.ejemplo-lleno.md   un perfil ficticio completo, para ver el nivel de detalle
 ├─ LECCIONES.md              los hallazgos medidos del barrido
 ├─ skill/empleos.md          la skill de Claude Code
 ├─ perfil.example.md         quien eres, que quieres, no negociables, zonas de calce
@@ -126,6 +128,7 @@ applyos/
 │  └─ ESTANDAR-CV.md            tailoring, formato, paginacion y analisis inverso
 ├─ entrevistas/
 │  ├─ PREPARACION.md            que hacer antes de cada entrevista
+│  ├─ GRABACION.md             grabar sin ser admin de la reunion, y transcribir
 │  ├─ EVALUACION.md             como evaluarte despues, con metricas duras
 │  └─ LECCIONES-ENTREVISTAS.example.md   tus patrones acumulados
 ├─ dashboard/embudo.example.html
@@ -145,7 +148,7 @@ Buscar trabajo tiene dos mitades y casi todas las herramientas cubren solo la pr
 
 **La segunda no.** Prepararte para una entrevista, evaluarte honestamente después, y convertir eso en un cambio de comportamiento concreto. Esa mitad es donde se decide si consigues el trabajo, y es la que la mayoría hace de memoria y a ojo.
 
-Por eso el repo trae [`entrevistas/PREPARACION.md`](entrevistas/PREPARACION.md) y [`entrevistas/EVALUACION.md`](entrevistas/EVALUACION.md). El segundo tiene el método completo. separar el resultado del proceso de la calidad de tus respuestas, sacar métricas duras del transcript, y las trampas de pedirle a una IA que te evalúe.
+Por eso el repo trae [`entrevistas/PREPARACION.md`](entrevistas/PREPARACION.md), [`entrevistas/GRABACION.md`](entrevistas/GRABACION.md) y [`entrevistas/EVALUACION.md`](entrevistas/EVALUACION.md). El segundo tiene el método completo. separar el resultado del proceso de la calidad de tus respuestas, sacar métricas duras del transcript, y las trampas de pedirle a una IA que te evalúe.
 
 ---
 
@@ -162,6 +165,17 @@ Si vas a construir algo parecido, esa página te ahorra semanas.
 Proyecto personal, en uso real. No es un producto ni pretende serlo. Los portales configurados son los de Chile y LATAM, pero la arquitectura sirve para cualquier mercado cambiando las fuentes.
 
 Si lo adaptas a tu país o le agregas un portal, los PR son bienvenidos.
+
+## Contacto
+
+Si adaptas esto a tu mercado, le agregas un portal o encuentras algo que se pueda mejorar, los issues y los PR son bienvenidos.
+
+Y si prefieres que te acompañen a montarlo, o quieres armar algo parecido para tu propio proceso o el de tu equipo, escríbeme. Hago asesorías puntuales sobre esto.
+
+- LinkedIn. [Javier Vrandecic](https://www.linkedin.com/in/javiervrandecic/)
+- GitHub. [@ubermancl](https://github.com/ubermancl)
+
+---
 
 ## Licencia
 

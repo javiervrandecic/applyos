@@ -23,7 +23,9 @@ Los dos son reales y no se anulan. **Un cierre cálido no valida una respuesta d
 
 En orden de utilidad:
 
-**Transcript con diarización** (quién dijo qué, con marcas de tiempo). Es el estándar de oro. Muchas plataformas de videollamada lo generan. Si grabas, hay herramientas de transcripción con diarización que corren local.
+**Dos pistas separadas, tu micrófono y el audio del escritorio.** Es lo mejor que puedes tener y no necesita diarización, porque cada voz queda en su propia pista. [`GRABACION.md`](GRABACION.md) explica cómo montarlo con OBS en cinco minutos.
+
+**Transcript con diarización** (quién dijo qué, con marcas de tiempo). El estándar de oro cuando solo tienes una pista mezclada. Muchas plataformas lo generan, y si no, hay servicios que lo hacen por poco o nada.
 
 **Transcript sin diarización.** Sirve, pero cuidado, es fácil confundir quién dijo qué.
 
