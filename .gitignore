@@ -1,17 +1,27 @@
-# Datos personales. NUNCA versionar.
+# ─── Datos personales. NUNCA versionar. ───
 perfil.md
 portales.md
-cv/cv-maestro.html
+tracker.md
+
+# CV real (la plantilla .example sí se versiona)
 cv/cv-maestro*.html
 !cv/cv-maestro.example.html
 cv/*.pdf
+
+# Dashboard con datos reales (el .example sí se versiona)
 dashboard/embudo.html
 dashboard/*.pdf
+
+# Entrevistas. lecciones y evaluaciones son personales.
+entrevistas/LECCIONES-ENTREVISTAS.md
+!entrevistas/LECCIONES-ENTREVISTAS.example.md
+entrevistas/evaluaciones/
+
+# Salidas de los barridos
 resultados*.json
-tracker.md
 procesos/
 
-# Sistema
+# ─── Sistema ───
 node_modules/
 .DS_Store
 Thumbs.db

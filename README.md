@@ -8,6 +8,8 @@ Corre sobre [Claude Code](https://claude.com/claude-code) como skill, más un pa
 
 > **Por qué existe.** Buscar trabajo a mano no escala. Revisar 600 avisos, decidir cuáles valen la pena y adaptar el CV a cada uno es un trabajo de tiempo completo sin sueldo. Y peor, lo haces a ciegas. no sabes si el problema es tu perfil, el mercado o el canal.
 
+### 👉 [Empieza acá: guía paso a paso](GUIA.md)
+
 ---
 
 ## El barrido
@@ -44,14 +46,28 @@ Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con
 
 ## Requisitos
 
-| Requisito | Para qué | Obligatorio |
-|---|---|---|
-| [Claude Code](https://claude.com/claude-code) | ejecutar la skill `/empleos` | sí |
-| Node.js 20+ (22+ recomendado) | scripts de barrido y de PDF | sí |
-| Google Chrome | generar el PDF del dashboard | solo para el PDF |
-| PowerShell 5.1+ | versión alternativa del barrido en Windows | no |
+| Requisito | Para qué |
+|---|---|
+| **Node.js 22+** | los scripts de barrido y de PDF |
+| **[Claude Code](https://claude.com/claude-code)** | análisis de calce, CVs adaptados y reporte de embudo. **Es de pago** |
+| Google Chrome | solo si quieres exportar el dashboard a PDF |
+| PowerShell 5.1+ | opcional, versión alternativa del barrido en Windows |
 
-No necesitas llaves de API. Todas las fuentes que usa son endpoints públicos.
+No necesitas llaves de API. Todas las fuentes son endpoints públicos.
+
+### Qué funciona sin Claude Code
+
+| | Solo con Node | Necesita Claude Code |
+|---|---|---|
+| Barrido de Get on Board | ✅ | |
+| Barrido de LinkedIn y portales locales | | ✅ |
+| Análisis de calce contra tu perfil | | ✅ |
+| Verificación en dos niveles | | ✅ |
+| CV adaptado a cada aviso | | ✅ |
+| Reporte de embudo | | ✅ |
+| Exportar el dashboard a PDF | ✅ | |
+
+El barrido solo te trae avisos, y eso lo hace cualquier portal. **El valor está en lo que viene después**, y eso corre sobre Claude Code.
 
 ## Instalación
 
@@ -99,21 +115,37 @@ node scripts/dashboard-pdf.js dashboard/embudo.html embudo.pdf
 
 ```
 applyos/
+├─ GUIA.md                   guia paso a paso, empieza aca
+├─ LECCIONES.md              los hallazgos medidos del barrido
 ├─ skill/empleos.md          la skill de Claude Code
-├─ perfil.example.md         plantilla de perfil       → copiar a perfil.md
-├─ portales.example.md       portales por país         → copiar a portales.md
+├─ perfil.example.md         quien eres, que quieres, no negociables, zonas de calce
+├─ portales.example.md       portales por pais
+├─ tracker.example.md        pipeline, descartes y anclas de renta. Es la fuente del dedup
 ├─ cv/
-│  ├─ cv-maestro.example.html   plantilla de CV ATS    → copiar a cv-maestro.html
-│  └─ ESTANDAR-CV.md            reglas de tailoring, formato ATS y verificación
-├─ dashboard/
-│  └─ embudo.example.html       dashboard del embudo con datos de ejemplo
-├─ scripts/
-│  ├─ getonbrd-sweep.js         barrido de la API de Get on Board (Node)
-│  ├─ getonbrd-sweep.ps1        el mismo, en PowerShell
-│  ├─ dashboard-pdf.js          HTML a PDF por CDP, sin header ni footer
-│  └─ linkedin-sweep.md         URLs, paginación y las trampas del buscador
-└─ LECCIONES.md              lo que costó descubrir
+│  ├─ cv-maestro.example.html   plantilla de CV compatible con filtros ATS
+│  └─ ESTANDAR-CV.md            tailoring, formato, paginacion y analisis inverso
+├─ entrevistas/
+│  ├─ PREPARACION.md            que hacer antes de cada entrevista
+│  ├─ EVALUACION.md             como evaluarte despues, con metricas duras
+│  └─ LECCIONES-ENTREVISTAS.example.md   tus patrones acumulados
+├─ dashboard/embudo.example.html
+└─ scripts/
+   ├─ getonbrd-sweep.js  ·  getonbrd-sweep.ps1
+   ├─ dashboard-pdf.js
+   └─ linkedin-sweep.md
 ```
+
+---
+
+## El ciclo no termina cuando envías el CV
+
+Buscar trabajo tiene dos mitades y casi todas las herramientas cubren solo la primera.
+
+**La primera mitad se automatiza.** Barrer, filtrar, deduplicar, adaptar el CV. Es volumen y criterio repetible.
+
+**La segunda no.** Prepararte para una entrevista, evaluarte honestamente después, y convertir eso en un cambio de comportamiento concreto. Esa mitad es donde se decide si consigues el trabajo, y es la que la mayoría hace de memoria y a ojo.
+
+Por eso el repo trae [`entrevistas/PREPARACION.md`](entrevistas/PREPARACION.md) y [`entrevistas/EVALUACION.md`](entrevistas/EVALUACION.md). El segundo tiene el método completo. separar el resultado del proceso de la calidad de tus respuestas, sacar métricas duras del transcript, y las trampas de pedirle a una IA que te evalúe.
 
 ---
 
