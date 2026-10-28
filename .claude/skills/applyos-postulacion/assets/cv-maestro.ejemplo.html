@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV — Nombre Apellido</title>
+<!--
+  PLANTILLA DE CV MAESTRO. Copia a cv-maestro.html y complétala.
+
+  Diseñada para pasar filtros ATS. Las decisiones de formato NO son estéticas,
+  están explicadas en ESTANDAR-CV.md. Antes de cambiar algo, léelo.
+
+  Reglas que este archivo respeta y conviene no romper:
+  - Skills en UNA columna, con la palabra "Skills" en el título de la sección.
+  - Sin tablas de varias columnas, sin texto dentro de imágenes, sin iconos
+    que reemplacen palabras.
+  - page-break-inside:avoid SOLO en .job, .proyecto y .aparicion.
+    NUNCA en .section, porque deja páginas en blanco.
+-->
+<style>
+  :root{ --ink:#1a1a1a; --muted:#555; --line:#ddd; --accent:#ff6b2b; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font:11pt/1.45 "Calibri","Segoe UI",Arial,sans-serif;
+    color:var(--ink); max-width:800px; margin:0 auto; padding:36px 40px;
+  }
+  h1{font-size:24pt;letter-spacing:-.01em}
+  .titular{color:var(--accent);font-size:12pt;font-weight:600;margin-top:3px}
+  .contacto{color:var(--muted);font-size:10pt;margin-top:8px}
+  .contacto a{color:var(--muted)}
+
+  h2{
+    font-size:11pt;text-transform:uppercase;letter-spacing:.08em;
+    border-bottom:1.5px solid var(--accent); padding-bottom:4px;
+    margin:22px 0 12px;
+  }
+  .resumen{margin-bottom:4px}
+
+  .job,.proyecto,.aparicion{margin-bottom:14px; page-break-inside:avoid}
+  .job-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cargo{font-weight:700}
+  .empresa{color:var(--muted)}
+  .fechas{color:var(--muted);font-size:10pt;white-space:nowrap}
+  ul{margin:6px 0 0 18px}
+  li{margin-bottom:3px}
+
+  /* Skills en una sola columna, a propósito. Ver ESTANDAR-CV.md. */
+  .skills p{margin-bottom:5px}
+  .skills strong{display:inline-block;min-width:150px}
+
+  .prueba{color:var(--accent);font-size:10pt}
+
+  @media print{ body{padding:0} }
+</style>
+</head>
+<body>
+
+  <h1>Nombre Apellido</h1>
+  <div class="titular">Título profesional orientado al cargo que buscas</div>
+  <div class="contacto">
+    Ciudad, País · +00 000 000 000 · correo@ejemplo.com ·
+    <a href="https://linkedin.com/in/usuario">linkedin.com/in/usuario</a> ·
+    <a href="https://github.com/usuario">github.com/usuario</a>
+  </div>
+
+  <h2>Perfil</h2>
+  <p class="resumen">
+    Tres o cuatro líneas. Qué haces, con qué lo haces, y el resultado más grande que
+    puedes probar. Este bloque es el que se reescribe en cada versión adaptada,
+    usando las palabras del aviso. El resto del CV casi no cambia.
+  </p>
+
+  <h2>Experiencia</h2>
+
+  <div class="job">
+    <div class="job-top">
+      <span><span class="cargo">Cargo</span> · <span class="empresa">Empresa</span></span>
+      <span class="fechas">MM/AAAA – Actualidad</span>
+    </div>
+    <ul>
+      <li>Logro con número y contexto. Qué construiste, para quién, y qué movió.</li>
+      <li>Un bullet, una idea. Si necesitas una coma para unir dos ideas, son dos bullets.</li>
+      <li>Nombre real del sistema, no "un proyecto de automatización".</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-top">
+      <span><span class="cargo">Cargo anterior</span> · <span class="empresa">Empresa</span></span>
+      <span class="fechas">MM/AAAA – MM/AAAA</span>
+    </div>
+    <ul>
+      <li>Logro con número.</li>
+    </ul>
+  </div>
+
+  <h2>Proyectos con prueba verificable</h2>
+
+  <div class="proyecto">
+    <div class="job-top">
+      <span class="cargo">Nombre del proyecto</span>
+      <span class="prueba">demo · repo · caso</span>
+    </div>
+    <ul>
+      <li>Qué problema resolvía y qué resultado produjo. Con el link al lado.</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <p><strong>Área principal</strong> Tecnología (nivel real), otra (nivel real)</p>
+    <p><strong>Área secundaria</strong> Tecnología (nivel real)</p>
+    <p><strong>Idiomas</strong> Idioma (nivel), idioma (nivel)</p>
+  </div>
+  <p style="color:var(--muted);font-size:9.5pt;margin-top:6px">
+    El nivel declarado es el nivel real. Hay cargos donde intermedio alcanza perfecto,
+    y en los que no, igual te iban a descubrir.
+  </p>
+
+  <h2>Educación y certificaciones</h2>
+  <div class="aparicion">
+    <div class="job-top">
+      <span><span class="cargo">Título</span> · <span class="empresa">Institución</span></span>
+      <span class="fechas">AAAA</span>
+    </div>
+  </div>
+  <div class="aparicion">
+    <div class="job-top">
+      <span><span class="cargo">Certificación</span> · <span class="empresa">Emisor</span></span>
+      <span class="prueba">link al certificado</span>
+    </div>
+  </div>
+
+</body>
+</html>

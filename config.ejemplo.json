@@ -1,0 +1,12 @@
+{
+  "carpeta_busqueda": "~/busqueda-empleo",
+  "perfil": "perfil.md",
+  "portales_md": "portales.md",
+  "portales_json": "portales.json",
+  "tracker": "tracker.md",
+  "cv_maestro": "cv/cv-maestro.html",
+  "carpeta_cv": "cv",
+  "carpeta_entrevistas": "entrevistas",
+  "carpeta_grabaciones": "~/grabaciones-entrevistas",
+  "dashboard": "dashboard/embudo.html"
+}

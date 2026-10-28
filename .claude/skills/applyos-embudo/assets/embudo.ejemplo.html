@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embudo de búsqueda de empleo</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e5e5e5;
+    --track:#eeeeee; --accent:#ff6b2b; --accent-on:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#151515; --ink:#f2f2f2; --muted:#9a9a9a; --line:#2e2e2e; --track:#2b2b2b; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif;
+    padding:48px 32px; max-width:1000px; margin:0 auto;
+  }
+  header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+  h1{font-size:34px;letter-spacing:-.02em;line-height:1.15}
+  .sub{color:var(--muted);margin-top:6px}
+  .meta{color:var(--muted);font-size:14px;text-align:right}
+  .rule{height:3px;width:96px;background:var(--accent);margin:28px 0 34px}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-bottom:38px}
+  .stat{border:1px solid var(--line);border-radius:10px;padding:16px}
+  .stat .n{font-size:30px;font-weight:700;line-height:1}
+  .stat .l{color:var(--muted);font-size:13px;margin-top:6px}
+  .stat.accent{border-color:var(--accent)}
+  .stat.accent .n{color:var(--accent)}
+
+  h2{font-size:20px;margin:36px 0 18px}
+  .row{margin-bottom:26px}
+  .row .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:8px}
+  .name{font-weight:500}
+  .right{display:flex;align-items:baseline;gap:18px}
+  .count{font-size:26px;font-weight:700;line-height:1}
+  .conv{color:var(--accent);font-weight:600;font-size:14px;min-width:120px;text-align:right}
+  .conv.base{color:var(--muted);font-weight:500}
+  .track{height:16px;background:var(--track);border-radius:8px;overflow:hidden}
+  .fill{height:100%;background:var(--accent);border-radius:8px}
+  .row.first .fill{background:var(--ink)}
+  .drop{color:var(--muted);font-size:13px;margin-top:7px}
+
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  .scroll{overflow-x:auto}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  .chip{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+  .chip.ok{background:rgba(40,160,90,.14);color:#28a05a}
+  .chip.wait{background:rgba(140,110,220,.16);color:#8c6edc}
+  .chip.act{background:rgba(220,70,70,.14);color:#dc4646}
+
+  footer{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+  /* Ver ESTANDAR-CV.md. el avoid va en los bloques chicos, nunca en section,
+     porque si un bloque grande no cabe deja una pagina en blanco. */
+  @media print{
+    body{padding:0;max-width:none}
+    .row,.stat,tr{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Embudo de búsqueda de empleo</h1>
+      <p class="sub">Cargos con criterio de calce aplicado, de análisis a carta de oferta</p>
+    </div>
+    <div class="meta">
+      actualizado <strong>15-03-2026</strong><br>
+      inicio de búsqueda 08-01-2026<br>
+      67 días activos
+    </div>
+  </header>
+
+  <div class="rule"></div>
+
+  <div class="stats">
+    <div class="stat accent"><div class="n">340</div><div class="l">Cargos analizados</div></div>
+    <div class="stat"><div class="n">68</div><div class="l">Postulados</div></div>
+    <div class="stat"><div class="n">14</div><div class="l">Contacto real</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">Entrevista 1</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Entrevista 2</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Oferta</div></div>
+  </div>
+
+  <h2>El embudo, etapa por etapa</h2>
+
+  <div class="row first">
+    <div class="top">
+      <span class="name">Cargos analizados</span>
+      <span class="right"><span class="count">340</span><span class="conv base">base</span></span>
+    </div>
+    <div class="track"><div class="fill" style="width:100%"></div></div>
+    <div class="drop">Datos de ejemplo. Reemplázalos con los tuyos.</div>
+  </div>
+
+  <div class="row">
+    <div class="top">
+      <span class="name">Postulados</span>
+      <span class="right"><span class="count">68</span><span class="conv">20,0% del total</span></span>
+    </div>
+    <div class="track"><div class="fill" style="width:43%"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="top">
+      <span class="name">Contacto humano real</span>
+      <span class="right"><span class="count">14</span><span class="conv">20,6% de postulados</span></span>
+    </div>
+    <div class="track"><div class="fill" style="width:19%"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="top">
+      <span class="name">Primera entrevista</span>
+      <span class="right"><span class="count">7</span><span class="conv">50,0% de contactos</span></span>
+    </div>
+    <div class="track"><div class="fill" style="width:14%"></div></div>
+    <div class="drop">Suele ser la conversión más sana del embudo. Si llegas a hablar con alguien, avanzas.</div>
+  </div>
+
+  <div class="row">
+    <div class="top">
+      <span class="name">Segunda entrevista</span>
+      <span class="right"><span class="count">3</span><span class="conv">42,9% de primeras</span></span>
+    </div>
+    <div class="track"><div class="fill" style="width:7%"></div></div>
+  </div>
+
+  <h2>Pipeline vivo ahora mismo</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Empresa</th><th>Cargo</th><th>Etapa</th><th>Días sin mover</th><th>Próxima acción</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Empresa A</td><td>AI Solutions Lead</td>
+          <td><span class="chip wait">Entrevista 2</span></td><td>1</td>
+          <td>Entrevista agendada</td>
+        </tr>
+        <tr>
+          <td>Empresa B</td><td>Jefe de Transformación Digital</td>
+          <td><span class="chip ok">Entrevista 1</span></td><td>3</td>
+          <td>Pelota en su cancha</td>
+        </tr>
+        <tr>
+          <td>Empresa C</td><td>Automation Engineer</td>
+          <td><span class="chip act">Postulada</span></td><td>12</td>
+          <td>Escribir seguimiento hoy</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p><strong>Cómo leer esto.</strong> Cada porcentaje es la conversión respecto de la etapa anterior, no del total. El total solo aparece en la fila de postulados.</p>
+    <p style="margin-top:10px"><strong>Chips.</strong> verde, la pelota está en su cancha · morado, requiere atención pronto · rojo, requiere una acción tuya ya.</p>
+    <p style="margin-top:10px"><strong>Lo que este dashboard no mide a propósito.</strong> qué portal convierte mejor. Mezcla dónde viste el aviso con por dónde postulaste, y los denominadores no son comparables. Ver lección 10.</p>
+  </footer>
+
+</body>
+</html>
