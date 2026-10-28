@@ -40,6 +40,16 @@ Si el aviso dice "workflow automation" y tu CV dice "automatización de flujos",
 
 Esto no es rellenar de palabras clave. Es traducir tu experiencia al vocabulario de quien lee.
 
+### El paso de palabras clave, sin mentir
+
+Antes de generar cada versión adaptada, haz este chequeo por escrito.
+
+1. **Tabla de requisitos.** Cada requisito del aviso, si lo cumples (sí, parcial o no) y la evidencia concreta en tu CV maestro.
+2. **Palabras clave faltantes, en dos grupos.** Las que SÍ tienes pero tu CV no las dice con esas palabras, que se pueden usar. Y las que NO tienes, que están prohibidas en el CV y se declaran como gap si te preguntan.
+3. **Antes y después.** Resumen, experiencia y habilidades en su versión original y en la mejorada, usando solo el primer grupo. Sin inventar herramientas, años ni cifras, y con las cifras verificadas tal cual.
+
+Un filtro automático que te deja pasar por una palabra que no manejas te lleva a una entrevista que vas a perder.
+
 ---
 
 ## Contenido

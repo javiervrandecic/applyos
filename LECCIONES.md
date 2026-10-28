@@ -128,3 +128,63 @@ Es tentador medir qué portal convierte mejor. No sirve, por dos razones.
 **Y los denominadores no son comparables.** Un portal con 15 postulaciones y otro con 60 producen porcentajes con estabilidad estadística muy distinta, y ponerlos lado a lado engaña.
 
 Lo que sí vale medir es la **vía de entrada**, o sea formulario ciego contra contacto humano directo a quien publicó. Esa distinción sí cambia lo que haces mañana.
+
+---
+
+## 11. Un cero no es un cero
+
+Un portal que siempre devuelve resultados y un día devuelve 0 casi nunca significa que no hay avisos. Significa bloqueo (403), límite de peticiones (429) o un límite silencioso.
+
+LinkedIn es el caso más traicionero. Después de unas 25 búsquedas seguidas empieza a devolver 0 o exactamente 10 resultados **sin dar ningún error**. En una corrida real, un bloque completo dio 0 al final del barrido y al repetirlo aparte, con pausa, devolvió entre 30 y 40 avisos por búsqueda, con hallazgos nuevos.
+
+Otro caso. un portal local "bloqueado" durante semanas resultó no estar bloqueado. Lo bloqueado era la herramienta de lectura web del agente. Con un script con cabecera de navegador respondía normal.
+
+**La regla.** reintentar una vez con pausa, cambiar de método, y solo si los dos fallan reportarlo como BLOQUEADO diciendo qué se intentó. Nunca registrar un bloqueo como "no hay avisos".
+
+---
+
+## 12. Una salida vieja se ve igual que una nueva
+
+El barrido delta compara contra la corrida anterior. Funciona muy bien hasta que lee el archivo equivocado.
+
+Dos casos reales. Un script que escribía en pantalla y no en archivo dejó en la carpeta la salida de hace tres días, y la revisión se hizo sobre esa. Se notó solo porque el conteo de nuevos era idéntico al del barrido anterior. En otro, dos scripts lanzados en paralelo nunca arrancaron, el archivo quedó intacto y el delta dio 0 nuevos en silencio.
+
+**La regla.** guardar cada salida con la fecha en el nombre, revisar la hora de modificación antes de leer, correr en secuencia, y tratar un conteo idéntico al anterior como sospecha. `scripts/delta.js` avisa en los dos casos.
+
+---
+
+## 13. El título no clasifica, el contenido sí
+
+La lección 6 dice que descartar por título pierde calces. La versión fuerte es que **clasificar** por título también falla.
+
+Hay empresas que publican "AI Engineer" para cargos que por dentro son de implementación con herramientas low-code, sin una línea de código propio. Y hay "Analistas" que por dentro son exactamente la función que buscas. Dejar de buscar por un título porque "ese no es mi cargo" pierde los dos.
+
+**La regla.** se mantienen las búsquedas amplias por título, y cada hallazgo se clasifica en una familia de función según lo que pide la descripción. Si no cae en ninguna familia, se descarta aunque pague bien.
+
+---
+
+## 14. Los campos de una API también mienten
+
+En Get on Board, un aviso que calzaba perfecto por stack resultó ser un talent pool (una lista de recolección de candidatos, no una vacante) y además restringido a dos países. La API lo decía, pero en campos que nadie miraba.
+
+- `rejected_reasons` no vacío significa que no es una vacante abierta.
+- `countries` suele traer solo `["Remote"]` aunque haya restricción de país real.
+- El nombre de la empresa puede venir vacío, y sin él no hay cruce contra el tracker.
+
+**La regla.** confirmar país y estado en la página pública del aviso antes de presentarlo como calce.
+
+---
+
+## 15. Lo que no se decide, desaparece
+
+El barrido delta muestra solo lo nuevo. Eso tiene un costo escondido. un calce que quedó "pendiente de decisión" no vuelve a aparecer en el informe siguiente, porque ya no es nuevo. En un caso real, un calce fuerte desapareció así y se recuperó solo porque se encontró a mano días después.
+
+**La regla.** cada informe lista aparte los calces sin decisión de barridos anteriores, con la fecha en que se vieron por primera vez, y se decide postular, descartar o dejarlo vencer.
+
+---
+
+## 16. Un resumen no es una verificación
+
+Cuando el barrido corre en segundo plano, su reporte final es una lectura, no una verificación. Dos días seguidos el resumen subestimó gaps reales. En uno no mencionaba que pedían dos años liderando un equipo formal y una certificación excluyente. En otro, los "5 años" exigidos eran años en ese cargo específico, no años de experiencia en general.
+
+**La regla.** antes de invertir en un CV, volver a leer el detalle uno mismo con la lista completa de requisitos. Y antes de decir que algo "sigue pendiente", mirar la fila real del tracker en vez de repetir lo que dijo un resumen anterior.
