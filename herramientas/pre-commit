@@ -1,0 +1,27 @@
+#!/bin/sh
+# Hook pre-commit de applyOS. Corre el escáner sobre lo que vas a commitear y frena si encuentra algo.
+#
+# Instalar
+#   cp herramientas/pre-commit .git/hooks/pre-commit
+#
+# Configuración personal (opcional). Crea .git/escaner.conf, que vive dentro de .git y nunca se publica.
+#   ESCANER_LISTA_NEGRA="/ruta/a/tu/lista-negra.txt"
+#   ESCANER_ARCHIVOS_SECRETOS="/ruta/a/tu/.env;/ruta/a/otro-archivo-de-claves"
+#
+# Saltarlo con --no-verify es posible, pero la idea es justamente no hacerlo.
+
+GIT_DIR=$(git rev-parse --git-dir)
+if [ -f "$GIT_DIR/escaner.conf" ]; then
+  . "$GIT_DIR/escaner.conf"
+  export ESCANER_LISTA_NEGRA ESCANER_ARCHIVOS_SECRETOS ESCANER_PERMITIR
+fi
+
+RAIZ=$(git rev-parse --show-toplevel)
+node "$RAIZ/herramientas/escanear.js" --staged
+estado=$?
+if [ $estado -ne 0 ]; then
+  echo ""
+  echo "Commit frenado por el escáner. Corrige los hallazgos y vuelve a intentarlo."
+  exit 1
+fi
+exit 0
