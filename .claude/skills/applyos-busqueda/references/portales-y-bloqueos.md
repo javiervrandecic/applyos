@@ -22,6 +22,7 @@ https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=
 4. Busca por título de cargo, no por stack.
 5. `location=Remote` devuelve el país de la oficina, no significa remoto.
 6. Tras unas 25 búsquedas seguidas empieza a devolver 0 o exactamente 10 sin error. Pausa entre búsquedas y reintenta aparte lo sospechoso.
+7. Uso responsable. Es una zona gris, los términos de LinkedIn prohíben la extracción automatizada. Sin sesión, una solicitud a la vez con pausa, máximo 5 páginas por término y unas 25 búsquedas por sesión, para al primer bloqueo y sin trucos. Reglas completas en `scripts/linkedin-sweep.md`.
 
 Detalle de un aviso: `https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/<id>`. Un aviso dentro de la ventana puede estar cerrado, y eso solo se ve con sesión iniciada: pide a la persona que abra el link antes de invertir en un CV.
 

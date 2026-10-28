@@ -2,6 +2,13 @@
 
 Historia de versiones de applyOS. Las fechas son de publicación.
 
+## 1.2.1 · 2026-10-28
+
+### Uso responsable
+- Sección nueva en el README, "Uso responsable, y una zona gris dicha con franqueza". Qué hace y qué no hace applyOS (no postula, no inicia sesión, no es un bot), el riesgo de leer portales con scripts y las reglas de ritmo.
+- `scripts/linkedin-sweep.md` suma las reglas de uso responsable. Sin sesión, una solicitud a la vez con pausa, tope de páginas y de búsquedas, parar al primer bloqueo y sin trucos.
+- La skill de búsqueda aclara que "cambiar de método" ante un bloqueo es probar otra fuente pública, nunca proxys, rotación de IP ni saltarse captchas.
+
 ## 1.2.0 · 2026-10-28
 
 La metodología pasa a skills de Claude Code y se suma un instructivo para medir tus entrevistas.

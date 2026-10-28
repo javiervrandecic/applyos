@@ -33,6 +33,18 @@ Devuelve HTML con las tarjetas de resultado. Título, empresa, ubicación y anti
 
 **4. `location=Remote` devuelve el país de la oficina, no la modalidad.** Cuatro búsquedas así dieron 40 resultados, todos presenciales en otros continentes. Para remoto real hay que leer el detalle de cada aviso.
 
+## Reglas de uso responsable
+
+Este barrido lee la búsqueda pública que cualquiera puede abrir sin cuenta. Es una zona gris. LinkedIn prohíbe en sus términos la extracción automatizada, incluso de datos públicos, así que el riesgo es tuyo, y lo más probable es un bloqueo temporal de tu conexión. Para ir como lo haría una persona.
+
+1. **Sin sesión.** Nunca inicies sesión ni uses cookies o tu cuenta en estos scripts.
+2. **Una a la vez y con pausa.** Nada en paralelo. Espera varios segundos entre solicitudes y un rato más entre términos.
+3. **Pocas páginas.** Pagina hasta que devuelva menos de 10, pero no más de 5 páginas por término, y no más de unas 25 búsquedas por sesión.
+4. **Al primer bloqueo, para.** Si devuelve 403 o 429, o de pronto 0 o exactamente 10 resultados sin error, pausa, reintenta una vez más tarde y, si sigue, repórtalo como BLOQUEADO y sigue a mano. No insistas.
+5. **Sin trucos.** Nada de proxys, rotación de IP, cabeceras falsas ni saltarse captchas.
+6. **Solo lo necesario.** Guarda cargo, empresa, ubicación, antigüedad y enlace. Nada de datos personales de otras personas.
+7. **Nunca postules por acá.** Postular es una acción tuya, hecha a mano, con tu sesión.
+
 ## Estrategia de términos
 
 Como el buscador pesa el título, una sola variante no alcanza. Corre una búsqueda por cada forma en que el mercado nombra tu función.

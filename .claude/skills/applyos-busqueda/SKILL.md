@@ -21,7 +21,7 @@ El barrido corre de corrido, sin pedir permiso por portal. Es lectura pública. 
 1. **Delta.** Copia las salidas anteriores a `barridos/prev-<fecha>/`.
 2. **Get on Board.** `node scripts/getonbrd-sweep.js --config portales.json --dias 15 --json > barridos/gob-<fecha>.json`. Busca por stack. Descarta talent pool.
 3. **LinkedIn y portales locales.** Busca por título de cargo, con ventana de 15 días y paginación reportada. Detalles y límites en `references/portales-y-bloqueos.md` y `scripts/linkedin-sweep.md`.
-4. **Bloqueos.** Un cero en un portal que siempre trae algo es bloqueo, no vacío. Reintenta, cambia de método y solo entonces repórtalo como BLOQUEADO.
+4. **Bloqueos.** Un cero en un portal que siempre trae algo es bloqueo, no vacío. Reintenta una vez más tarde, prueba otra fuente pública (otra API o la página del aviso) y solo entonces repórtalo como BLOQUEADO. Nunca uses proxys, rotación de IP ni te saltes captchas.
 5. **Dedup.** `node scripts/delta.js barridos/gob-<fecha>.json barridos/prev-<fecha>/gob.json --tracker tracker.md`. Empresa conocida no es cargo cubierto, compara el título.
 6. **Clasificar por contenido** en las familias de `perfil.md`. Nivel 1 se descarta sin abrir. Nivel 2 obliga a leer el detalle con la lista completa de requisitos. Reglas en `references/calce.md`.
 7. **Si una empresa calza**, revisa todas sus vacantes.
@@ -40,6 +40,7 @@ El barrido corre de corrido, sin pedir permiso por portal. Es lectura pública. 
 - El título no decide nada. Lo decide la descripción completa.
 - Un resumen de un subagente no es verificación: relee el detalle antes de recomendar.
 - Lo que no pudiste leer se informa como "no verificado".
+- Ritmo humano y uso responsable. Sin iniciar sesión, una solicitud a la vez con pausa, pocas páginas, parar al primer bloqueo y nunca postular por la persona. Las reglas completas están en `scripts/linkedin-sweep.md` y en el README.
 - Los chequeos de techo y de "o afines" están en `references/calce.md`.
 
 ## Archivos de apoyo

@@ -50,6 +50,21 @@ Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con
 
 ---
 
+## Uso responsable, y una zona gris dicha con franqueza
+
+**applyOS no postula por ti y no es un bot.** Cada postulación la haces tú, a mano. No inicia sesión en ninguna plataforma, no usa tu cuenta, no completa formularios por ti ni simula clics. Y no vas a conseguir 100 o 200 entrevistas en 24 horas. Lo que automatiza es la parte de encontrar y ordenar: leer avisos públicos, filtrarlos por calce, adaptar tu CV y llevar el registro. Postular en masa con un bot rompe las reglas de casi todos los portales, te puede costar la cuenta y convierte peor, así que no es el objetivo y no lo vas a encontrar acá.
+
+**La zona gris.** Los barridos leen páginas y endpoints públicos que cualquier persona puede abrir en un navegador sin cuenta, como la API pública de Get on Board y la búsqueda pública de LinkedIn sin sesión. Lo hacen de forma acotada y pausada, como lo haría una persona revisando varios avisos para saber qué empleos hay en el mercado. No es lo mismo que entrar a tu cuenta con un bot y postular. Pero algunos portales, LinkedIn entre ellos, prohíben en sus términos de uso la extracción automatizada incluso de datos públicos. Entonces hay un riesgo, y está bien decirlo. Lo más probable es que bloqueen tu conexión por un rato, y estos scripts no usan tu cuenta. Cumplir las reglas de cada portal es responsabilidad de quien lo usa. Si no te sientes cómodo, haz esa parte a mano: el resto funciona igual con los avisos que le entregues.
+
+**Las reglas de ritmo que sigue la skill, y que tú deberías seguir:**
+- Sin iniciar sesión, sin tu cuenta y sin cookies.
+- Una búsqueda a la vez, nunca en paralelo, con varios segundos de pausa entre solicitudes.
+- Pocas páginas por término, y a un ritmo humano, no cientos de solicitudes seguidas.
+- Al primer bloqueo (403 o 429) se pausa y se avisa. Cambiar de método significa probar otra fuente pública, nunca usar proxys, rotar direcciones IP ni saltarse captchas.
+- Solo se guarda el cargo, la empresa y el enlace del aviso, nada de datos personales de otras personas.
+
+---
+
 ## Requisitos
 
 | Requisito | Para qué |
