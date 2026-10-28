@@ -81,6 +81,8 @@ En Windows sin Node puedes usar la versión en PowerShell:
 
 ## 4. Instala Claude Code
 
+> **Atajo desde la versión 1.2.0.** En vez de copiar la skill a mano puedes correr `.\instalar.ps1` (o `./instalar.sh`) y editar `~/.applyos/config.json`. Detalle en [`docs/INSTALACION-SKILLS.md`](docs/INSTALACION-SKILLS.md).
+
 Sigue las instrucciones de [claude.com/claude-code](https://claude.com/claude-code). Es una herramienta de terminal, no una web.
 
 Cuando esté, verifica:
@@ -182,6 +184,8 @@ Cada aviso sale como NUEVO o como EMPRESA CONOCIDA. La segunda no se descarta so
 Cuando te muestre los resultados, respondes con el número. Va a leer el aviso completo, hacer el análisis de calce a fondo con los huecos reales, y si le dices que sí, genera el CV adaptado.
 
 ## 11. Cuando te llamen a entrevista
+
+Si instalaste las skills (ver [`docs/INSTALACION-SKILLS.md`](docs/INSTALACION-SKILLS.md)), di `tengo una entrevista, prepárame` y después `evalúa mi entrevista` con la grabación. Para medir con datos reales sigue [`docs/DIARIZAR-ENTREVISTAS.md`](docs/DIARIZAR-ENTREVISTAS.md).
 
 Acá empieza la mitad que ninguna herramienta cubre y donde de verdad se decide si consigues el trabajo.
 

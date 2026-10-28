@@ -2,6 +2,27 @@
 
 Historia de versiones de applyOS. Las fechas son de publicación.
 
+## 1.2.0 · 2026-10-28
+
+La metodología pasa a skills de Claude Code y se suma un instructivo para medir tus entrevistas.
+
+### Skills
+- **Cuatro skills** en `.claude/skills/`. `applyos-busqueda` (barrido y calce), `applyos-postulacion` (CV adaptado, formularios, mensajes, seguimiento), `applyos-entrevista` (playbook y evaluación) y `applyos-embudo` (reportes, dashboard, cierre). Cada una con un `SKILL.md` corto, `references/` y `scripts/`.
+- `instalar.ps1` e `instalar.sh` copian las skills a tu usuario o a un proyecto sin sobrescribir nada sin avisar, con `-Forzar` y respaldo si lo pides.
+- Las rutas de tus datos se configuran en `~/.applyos/config.json`, fuera del repo. Modelo en `config.ejemplo.json`.
+- `herramientas/sincronizar-skills.js` mantiene al día las copias de scripts y documentos dentro de las skills.
+- El comando `skill/empleos.md` se mantiene por compatibilidad.
+
+### Diarización de entrevistas
+- `docs/DIARIZAR-ENTREVISTAS.md`. Qué es, cómo grabar (con la nota de consentimiento), paso a paso con AssemblyAI, costos y privacidad con fuente y fecha, y alternativas, marcando lo no verificado.
+- `diarizar.js`. Sube el audio, pide la transcripción con speaker labels en español, espera con reintentos y guarda un JSON y una transcripción en markdown. Node 18 o superior, sin dependencias. La clave se lee solo de `ASSEMBLYAI_API_KEY`.
+- `metricas.js`. Porcentaje de habla, apertura, turnos de más de 60 segundos, muletillas por minuto e interrupciones, desde el JSON.
+- Probado con un diálogo sintético de dos voces. Detectó dos hablantes y las métricas coinciden con el cálculo a mano.
+
+### Documentación
+- Sección "Cómo usarlo como skills de Claude Code" en el README, con la tabla de qué hace la IA y qué haces tú.
+- `docs/INSTALACION-SKILLS.md`.
+
 ## 1.1.0 · 2026-10-28
 
 Tres meses de uso real desde la primera versión. La metodología cambió más que los scripts.

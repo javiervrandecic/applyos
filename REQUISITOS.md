@@ -16,6 +16,8 @@ Esto es lo único obligatorio y es muy poco.
 
 Con eso corre `scripts/getonbrd-sweep.js` y ya tienes avisos.
 
+**Para diarizar entrevistas** basta Node 18 o superior, además de una cuenta de AssemblyAI con su clave en la variable de entorno `ASSEMBLYAI_API_KEY`. Ver [`docs/DIARIZAR-ENTREVISTAS.md`](docs/DIARIZAR-ENTREVISTAS.md).
+
 **Por qué Node 22 y no menos.** El generador de PDF usa `WebSocket` nativo, que es estable recién desde la 22. El barrido sí funciona en la 20, el PDF no.
 
 ---

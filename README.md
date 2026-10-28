@@ -2,13 +2,13 @@
 
 Sistema de búsqueda de empleo asistido por IA. Barre varios portales, analiza el calce real de cada aviso contra tu perfil leyendo la descripción completa en vez del título, y te entrega un reporte en formato embudo para saber en qué etapa se te cae cada proceso.
 
-Corre sobre [Claude Code](https://claude.com/claude-code) como skill, más un par de scripts en Node y PowerShell.
+Corre sobre [Claude Code](https://claude.com/claude-code) como [cuatro skills](#cómo-usarlo-como-skills-de-claude-code) (o como comando de barra), más un par de scripts en Node y PowerShell.
 
 > **applyOS es una plantilla.** Tu perfil, tu tracker, tus CVs y tus barridos viven fuera del repo, en tu propia carpeta de búsqueda, y los archivos donde irían están en el `.gitignore`. Lo que se comparte acá es el sistema, nunca los datos de nadie.
 
 > **Por qué existe.** Buscar trabajo a mano no escala. Revisar 600 avisos, decidir cuáles valen la pena y adaptar el CV a cada uno es un trabajo de tiempo completo sin sueldo. Y peor, lo haces a ciegas. No sabes si el problema es tu perfil, el mercado o el canal.
 
-### 👉 [Empieza acá. Guía paso a paso](GUIA.md)  ·  [Requisitos](REQUISITOS.md)  ·  [Cambios](CHANGELOG.md)
+### 👉 [Empieza acá. Guía paso a paso](GUIA.md)  ·  [Requisitos](REQUISITOS.md)  ·  [Instalar las skills](docs/INSTALACION-SKILLS.md)  ·  [Diarizar entrevistas](docs/DIARIZAR-ENTREVISTAS.md)  ·  [Cambios](CHANGELOG.md)
 
 ---
 
@@ -77,6 +77,56 @@ No necesitas llaves de API. Todas las fuentes son endpoints públicos.
 
 El barrido solo te trae avisos, y eso lo hace cualquier portal. **El valor está en lo que viene después**, y eso corre sobre Claude Code.
 
+## Cómo usarlo como skills de Claude Code
+
+Desde la versión 1.2.0, applyOS viene también como **cuatro skills** de Claude Code. Una skill es una carpeta con un `SKILL.md` corto, más `scripts/` y `references/`. Claude la activa solo cuando lo que pides coincide con su descripción, y carga los detalles largos únicamente cuando los necesita, así que gasta menos contexto que un comando largo.
+
+### Instalación en 3 pasos
+
+1. Clona el repo: `git clone https://github.com/<usuario>/applyos.git`
+2. Instala las skills. En Windows `.\instalar.ps1`, en macOS, Linux o Git Bash `./instalar.sh`. Te pregunta si las quieres en tu usuario (`~/.claude/skills`, valen para todo) o en un proyecto (`<proyecto>/.claude/skills`). No sobrescribe nada sin avisar: si una skill ya existe la salta, y con `-Forzar` (o `FORZAR=1`) la respalda antes de reemplazarla.
+3. Edita `~/.applyos/config.json` con las rutas de tu perfil, tu CV maestro, tu tracker y tus grabaciones. El instalador deja un archivo de ejemplo si no existe. Ese archivo vive fuera del repo, así que tus datos nunca se publican.
+
+Detalle, instalación manual y solución de problemas en [`docs/INSTALACION-SKILLS.md`](docs/INSTALACION-SKILLS.md).
+
+### Qué hace cada skill
+
+| Skill | Qué hace | Frases que la activan |
+|---|---|---|
+| `applyos-busqueda` | Barre portales, lee la descripción completa, clasifica el calce, deduplica contra el tracker y registra todo | "haz un barrido de empleos", "qué hay nuevo hoy", "¿este cargo calza conmigo?" |
+| `applyos-postulacion` | Tabla de requisitos, CV adaptado desde tu maestro, respuestas de formularios, correo listo y registro | "prepara la postulación a este cargo", "adapta mi CV a este aviso", "redacta el correo" |
+| `applyos-entrevista` | Playbook antes de la entrevista y evaluación después, con diarización y métricas | "tengo entrevista el jueves, prepárame", "evalúa esta entrevista", "diariza este audio" |
+| `applyos-embudo` | Reporte del embudo por etapa, dashboard, PDF e informe de cierre | "genera el reporte de embudo", "cómo va mi búsqueda", "informe de cierre" |
+
+### Qué hace la IA y qué haces tú
+
+| La IA | Tú |
+|---|---|
+| Barre los portales y lee las descripciones completas | Defines tu perfil, tus familias de cargo y tus no negociables |
+| Clasifica el calce y marca los gaps | Decides cuáles postular |
+| Adapta el CV con tu material real, sin inventar | Revisas el PDF y confirmas que es verdad |
+| Redacta correos y respuestas de formularios | Envías tú, y avisas cuando lo hiciste |
+| Calcula métricas de la entrevista desde la transcripción | Grabas con consentimiento de los demás participantes y verificas las citas |
+| Propone máximo dos correcciones | Las practicas |
+| Arma el embudo desde tu tracker | Mantienes el tracker al día |
+
+### Qué corre en tu PC y qué no
+
+- **En tu PC.** Los scripts de Node (barrido, delta, métricas, PDF), el instalador, el escáner, tus archivos y el tracker.
+- **Hacia internet.** Los barridos consultan portales públicos. `diarizar.js` sube el audio a AssemblyAI y ahí queda según su política de retención (ver [`docs/DIARIZAR-ENTREVISTAS.md`](docs/DIARIZAR-ENTREVISTAS.md)). El texto que Claude lee y escribe pasa por el servicio de Claude.
+- **No sale nunca de tu equipo por este repo.** Tu perfil, tu CV, tu tracker y tus grabaciones.
+
+### Requisitos
+
+Claude Code (de pago), Node.js 22 o superior (la diarización solo pide Node 18), Chrome o Edge si quieres PDF y, para diarizar, una cuenta de AssemblyAI con su clave en la variable de entorno `ASSEMBLYAI_API_KEY`. Más en [`REQUISITOS.md`](REQUISITOS.md).
+
+### Skill o comando, cuál es la diferencia
+
+`skill/empleos.md` es el **comando de barra** original (`/empleos`): un solo archivo largo que se carga entero cada vez que lo invocas, y que tú lanzas a mano. Las **skills** son carpetas, se activan solas por su descripción, empaquetan sus scripts y leen los detalles solo cuando hacen falta. El comando sigue en el repo por compatibilidad, y `instalar.ps1 -ConComando` lo instala si lo quieres. Son la misma metodología: si usas las skills, no necesitas el comando.
+
+Los scripts y documentos originales siguen en la raíz del repo, y las skills llevan una copia para poder instalarse copiando una carpeta. `node herramientas/sincronizar-skills.js` las mantiene al día y `--verificar` comprueba que no haya diferencias.
+
+---
 ## Instalación
 
 ```bash
@@ -136,7 +186,11 @@ applyos/
 ├─ REQUISITOS.md             software, hardware y costos reales
 ├─ LECCIONES.md              los hallazgos medidos del barrido
 ├─ CHANGELOG.md              historia de versiones
-├─ skill/empleos.md          la skill de Claude Code
+├─ skill/empleos.md          el comando /empleos original (compatibilidad)
+├─ .claude/skills/           las 4 skills (busqueda, postulacion, entrevista, embudo)
+├─ instalar.ps1 · instalar.sh   instalan las skills sin sobrescribir
+├─ config.ejemplo.json       modelo de ~/.applyos/config.json
+├─ docs/                     instalación de skills y diarización de entrevistas
 ├─ perfil.ejemplo.md         quién eres, qué quieres, familias, no negociables
 ├─ perfil.ejemplo-lleno.md   un perfil ficticio completo, para ver el nivel de detalle
 ├─ portales.ejemplo.md       portales por país y sus trampas
@@ -153,10 +207,12 @@ applyos/
 ├─ dashboard/embudo.ejemplo.html
 ├─ herramientas/
 │  ├─ escanear.js               escáner de secretos y datos personales
-│  └─ pre-commit                hook que corre el escáner antes de cada commit
+│  ├─ pre-commit                hook que corre el escáner antes de cada commit
+│  └─ sincronizar-skills.js     copia scripts y docs a las skills
 └─ scripts/
    ├─ getonbrd-sweep.js  ·  getonbrd-sweep.ps1
    ├─ delta.js                  barrido delta y cruce contra el tracker
+   (los scripts de diarización y métricas viven en .claude/skills/applyos-entrevista/scripts)
    ├─ dashboard-pdf.js
    └─ linkedin-sweep.md
 ```
