@@ -1,0 +1,1172 @@
+{
+ "audio_duration": 60,
+ "language_code": "es",
+ "status": "completed",
+ "text": "Hola, gracias por venir. Cuéntame un poco de ti y de tu experiencia. Bueno, o sea, soy ingeniero y llevo cuatro años automatizando procesos en empresas medianas. Digamos que me dedico a conectar sistemas, por ejemplo el CRM con la facturación y a medir cuánto tiempo ahorra cada automatización. Básicamente mi último proyecto redujo en un 40 las horas de trabajo manual de un equipo comercial e y ahora busco un cargo donde pueda liderar proyectos de este tipo, porque me gusta mucho enseñar a otros equipos a usar estas herramientas en su día a día y creo que la mejor forma de adoptar tecnología es empezar por un problema pequeño y concreto. ¿Muy bien, y cómo mides el resultado de un proyecto así? Claro, medimos horas antes y después y también los errores, o sea, si el proceso baja de 10 horas a 4, eso se reporta cada mes. Perfecto, eso es todo por hoy, te avisamos la próxima semana.",
+ "utterances": [
+  {
+   "speaker": "A",
+   "start": 240,
+   "end": 4880,
+   "text": "Hola, gracias por venir. Cuéntame un poco de ti y de tu experiencia.",
+   "confidence": 0.9886569
+  },
+  {
+   "speaker": "B",
+   "start": 5760,
+   "end": 39080,
+   "text": "Bueno, o sea, soy ingeniero y llevo cuatro años automatizando procesos en empresas medianas. Digamos que me dedico a conectar sistemas, por ejemplo el CRM con la facturación y a medir cuánto tiempo ahorra cada automatización. Básicamente mi último proyecto redujo en un 40 las horas de trabajo manual de un equipo comercial e y ahora busco un cargo donde pueda liderar proyectos de este tipo, porque me gusta mucho enseñar a otros equipos a usar estas herramientas en su día a día y creo que la mejor forma de adoptar tecnología es empezar por un problema pequeño y concreto.",
+   "confidence": 0.97062486
+  },
+  {
+   "speaker": "A",
+   "start": 39960,
+   "end": 43960,
+   "text": "¿Muy bien, y cómo mides el resultado de un proyecto así?",
+   "confidence": 0.98706794
+  },
+  {
+   "speaker": "B",
+   "start": 44760,
+   "end": 53240,
+   "text": "Claro, medimos horas antes y después y también los errores, o sea, si el proceso baja de 10 horas a 4, eso se reporta cada mes.",
+   "confidence": 0.99447554
+  },
+  {
+   "speaker": "A",
+   "start": 54430,
+   "end": 58590,
+   "text": "Perfecto, eso es todo por hoy, te avisamos la próxima semana.",
+   "confidence": 0.9816081
+  }
+ ],
+ "words": [
+  {
+   "text": "Hola,",
+   "start": 240,
+   "end": 720,
+   "confidence": 0.99975586,
+   "speaker": "A"
+  },
+  {
+   "text": "gracias",
+   "start": 720,
+   "end": 1120,
+   "confidence": 0.90844727,
+   "speaker": "A"
+  },
+  {
+   "text": "por",
+   "start": 1120,
+   "end": 1400,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "venir.",
+   "start": 1400,
+   "end": 1760,
+   "confidence": 0.9909668,
+   "speaker": "A"
+  },
+  {
+   "text": "Cuéntame",
+   "start": 2320,
+   "end": 3160,
+   "confidence": 0.998291,
+   "speaker": "A"
+  },
+  {
+   "text": "un",
+   "start": 3160,
+   "end": 3280,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "poco",
+   "start": 3280,
+   "end": 3480,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "de",
+   "start": 3480,
+   "end": 3600,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "ti",
+   "start": 3600,
+   "end": 3840,
+   "confidence": 0.9902344,
+   "speaker": "A"
+  },
+  {
+   "text": "y",
+   "start": 3840,
+   "end": 3960,
+   "confidence": 0.99316406,
+   "speaker": "A"
+  },
+  {
+   "text": "de",
+   "start": 3960,
+   "end": 4120,
+   "confidence": 0.99853516,
+   "speaker": "A"
+  },
+  {
+   "text": "tu",
+   "start": 4120,
+   "end": 4280,
+   "confidence": 0.99902344,
+   "speaker": "A"
+  },
+  {
+   "text": "experiencia.",
+   "start": 4280,
+   "end": 4880,
+   "confidence": 0.9741211,
+   "speaker": "A"
+  },
+  {
+   "text": "Bueno,",
+   "start": 5760,
+   "end": 6320,
+   "confidence": 0.99731445,
+   "speaker": "B"
+  },
+  {
+   "text": "o",
+   "start": 6320,
+   "end": 6640,
+   "confidence": 0.98046875,
+   "speaker": "B"
+  },
+  {
+   "text": "sea,",
+   "start": 6640,
+   "end": 6960,
+   "confidence": 0.99121094,
+   "speaker": "B"
+  },
+  {
+   "text": "soy",
+   "start": 6960,
+   "end": 7320,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "ingeniero",
+   "start": 7320,
+   "end": 7760,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 7760,
+   "end": 7880,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "llevo",
+   "start": 7880,
+   "end": 8200,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "cuatro",
+   "start": 8200,
+   "end": 8440,
+   "confidence": 0.9998372,
+   "speaker": "B"
+  },
+  {
+   "text": "años",
+   "start": 8440,
+   "end": 8680,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "automatizando",
+   "start": 8680,
+   "end": 9440,
+   "confidence": 0.9136963,
+   "speaker": "B"
+  },
+  {
+   "text": "procesos",
+   "start": 9440,
+   "end": 9880,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "en",
+   "start": 9880,
+   "end": 10040,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "empresas",
+   "start": 10040,
+   "end": 10440,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "medianas.",
+   "start": 10440,
+   "end": 11120,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "Digamos",
+   "start": 11760,
+   "end": 12240,
+   "confidence": 0.81103516,
+   "speaker": "B"
+  },
+  {
+   "text": "que",
+   "start": 12240,
+   "end": 12400,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "me",
+   "start": 12400,
+   "end": 12520,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "dedico",
+   "start": 12520,
+   "end": 12880,
+   "confidence": 0.9902344,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 12880,
+   "end": 13040,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "conectar",
+   "start": 13040,
+   "end": 13440,
+   "confidence": 0.99397784,
+   "speaker": "B"
+  },
+  {
+   "text": "sistemas,",
+   "start": 13440,
+   "end": 14040,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "por",
+   "start": 14040,
+   "end": 14280,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "ejemplo",
+   "start": 14280,
+   "end": 14560,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "el",
+   "start": 14560,
+   "end": 14720,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "CRM",
+   "start": 14720,
+   "end": 15280,
+   "confidence": 0.81103516,
+   "speaker": "B"
+  },
+  {
+   "text": "con",
+   "start": 15280,
+   "end": 15440,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "la",
+   "start": 15440,
+   "end": 15560,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "facturación",
+   "start": 15560,
+   "end": 16240,
+   "confidence": 0.998291,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 16240,
+   "end": 16440,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 16440,
+   "end": 16600,
+   "confidence": 0.99658203,
+   "speaker": "B"
+  },
+  {
+   "text": "medir",
+   "start": 16600,
+   "end": 16800,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "cuánto",
+   "start": 16800,
+   "end": 17280,
+   "confidence": 0.99104816,
+   "speaker": "B"
+  },
+  {
+   "text": "tiempo",
+   "start": 17280,
+   "end": 17440,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "ahorra",
+   "start": 17440,
+   "end": 17800,
+   "confidence": 0.9998372,
+   "speaker": "B"
+  },
+  {
+   "text": "cada",
+   "start": 17800,
+   "end": 18000,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "automatización.",
+   "start": 18000,
+   "end": 18800,
+   "confidence": 0.9543457,
+   "speaker": "B"
+  },
+  {
+   "text": "Básicamente",
+   "start": 19600,
+   "end": 20320,
+   "confidence": 0.96813965,
+   "speaker": "B"
+  },
+  {
+   "text": "mi",
+   "start": 20480,
+   "end": 20760,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "último",
+   "start": 20760,
+   "end": 21080,
+   "confidence": 0.99886066,
+   "speaker": "B"
+  },
+  {
+   "text": "proyecto",
+   "start": 21080,
+   "end": 21400,
+   "confidence": 0.9977214,
+   "speaker": "B"
+  },
+  {
+   "text": "redujo",
+   "start": 21400,
+   "end": 21840,
+   "confidence": 0.81315106,
+   "speaker": "B"
+  },
+  {
+   "text": "en",
+   "start": 21840,
+   "end": 22040,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "un",
+   "start": 22040,
+   "end": 22200,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "40",
+   "start": 22200,
+   "end": 22524,
+   "confidence": 0.97461,
+   "speaker": "B"
+  },
+  {
+   "text": "las",
+   "start": 22920,
+   "end": 23160,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "horas",
+   "start": 23160,
+   "end": 23400,
+   "confidence": 0.9404297,
+   "speaker": "B"
+  },
+  {
+   "text": "de",
+   "start": 23400,
+   "end": 23520,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "trabajo",
+   "start": 23520,
+   "end": 23880,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "manual",
+   "start": 23880,
+   "end": 24240,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "de",
+   "start": 24240,
+   "end": 24400,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "un",
+   "start": 24400,
+   "end": 24520,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "equipo",
+   "start": 24520,
+   "end": 24840,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "comercial",
+   "start": 24840,
+   "end": 25360,
+   "confidence": 0.9998372,
+   "speaker": "B"
+  },
+  {
+   "text": "e",
+   "start": 26360,
+   "end": 26600,
+   "confidence": 0.9013672,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 26600,
+   "end": 26840,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "ahora",
+   "start": 26840,
+   "end": 27000,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "busco",
+   "start": 27000,
+   "end": 27360,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "un",
+   "start": 27360,
+   "end": 27520,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "cargo",
+   "start": 27520,
+   "end": 27800,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "donde",
+   "start": 27800,
+   "end": 28000,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "pueda",
+   "start": 28000,
+   "end": 28280,
+   "confidence": 0.9992676,
+   "speaker": "B"
+  },
+  {
+   "text": "liderar",
+   "start": 28280,
+   "end": 28720,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "proyectos",
+   "start": 28720,
+   "end": 29200,
+   "confidence": 0.90563965,
+   "speaker": "B"
+  },
+  {
+   "text": "de",
+   "start": 29200,
+   "end": 29320,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "este",
+   "start": 29320,
+   "end": 29480,
+   "confidence": 0.6220703,
+   "speaker": "B"
+  },
+  {
+   "text": "tipo,",
+   "start": 29480,
+   "end": 29880,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "porque",
+   "start": 30040,
+   "end": 30320,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "me",
+   "start": 30320,
+   "end": 30440,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "gusta",
+   "start": 30440,
+   "end": 30640,
+   "confidence": 0.8654785,
+   "speaker": "B"
+  },
+  {
+   "text": "mucho",
+   "start": 30640,
+   "end": 30920,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "enseñar",
+   "start": 30920,
+   "end": 31360,
+   "confidence": 0.88708496,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 31360,
+   "end": 31480,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "otros",
+   "start": 31480,
+   "end": 31720,
+   "confidence": 0.78100586,
+   "speaker": "B"
+  },
+  {
+   "text": "equipos",
+   "start": 31720,
+   "end": 32080,
+   "confidence": 0.8930664,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 32080,
+   "end": 32280,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "usar",
+   "start": 32280,
+   "end": 32520,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "estas",
+   "start": 32520,
+   "end": 32800,
+   "confidence": 0.66918945,
+   "speaker": "B"
+  },
+  {
+   "text": "herramientas",
+   "start": 32800,
+   "end": 33240,
+   "confidence": 0.9759766,
+   "speaker": "B"
+  },
+  {
+   "text": "en",
+   "start": 33240,
+   "end": 33440,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "su",
+   "start": 33440,
+   "end": 33640,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "día",
+   "start": 33640,
+   "end": 33880,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 33880,
+   "end": 34080,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "día",
+   "start": 34080,
+   "end": 34320,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 34320,
+   "end": 34560,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "creo",
+   "start": 34560,
+   "end": 34800,
+   "confidence": 0.8112793,
+   "speaker": "B"
+  },
+  {
+   "text": "que",
+   "start": 34800,
+   "end": 34920,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "la",
+   "start": 34920,
+   "end": 35040,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "mejor",
+   "start": 35040,
+   "end": 35240,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "forma",
+   "start": 35240,
+   "end": 35600,
+   "confidence": 0.8276367,
+   "speaker": "B"
+  },
+  {
+   "text": "de",
+   "start": 35600,
+   "end": 35720,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "adoptar",
+   "start": 35720,
+   "end": 36080,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "tecnología",
+   "start": 36080,
+   "end": 36800,
+   "confidence": 0.9960124,
+   "speaker": "B"
+  },
+  {
+   "text": "es",
+   "start": 36800,
+   "end": 36960,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "empezar",
+   "start": 36960,
+   "end": 37360,
+   "confidence": 0.8930664,
+   "speaker": "B"
+  },
+  {
+   "text": "por",
+   "start": 37360,
+   "end": 37480,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "un",
+   "start": 37480,
+   "end": 37600,
+   "confidence": 0.99609375,
+   "speaker": "B"
+  },
+  {
+   "text": "problema",
+   "start": 37600,
+   "end": 37920,
+   "confidence": 0.9699707,
+   "speaker": "B"
+  },
+  {
+   "text": "pequeño",
+   "start": 37920,
+   "end": 38400,
+   "confidence": 0.9991862,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 38400,
+   "end": 38560,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "concreto.",
+   "start": 38560,
+   "end": 39080,
+   "confidence": 0.9679362,
+   "speaker": "B"
+  },
+  {
+   "text": "¿Muy",
+   "start": 39960,
+   "end": 40320,
+   "confidence": 0.99560547,
+   "speaker": "A"
+  },
+  {
+   "text": "bien,",
+   "start": 40320,
+   "end": 40680,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "y",
+   "start": 41240,
+   "end": 41559,
+   "confidence": 0.99853516,
+   "speaker": "A"
+  },
+  {
+   "text": "cómo",
+   "start": 41559,
+   "end": 41920,
+   "confidence": 0.87109375,
+   "speaker": "A"
+  },
+  {
+   "text": "mides",
+   "start": 41920,
+   "end": 42280,
+   "confidence": 0.9996745,
+   "speaker": "A"
+  },
+  {
+   "text": "el",
+   "start": 42280,
+   "end": 42400,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "resultado",
+   "start": 42400,
+   "end": 42880,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "de",
+   "start": 42880,
+   "end": 43040,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "un",
+   "start": 43040,
+   "end": 43200,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "proyecto",
+   "start": 43200,
+   "end": 43560,
+   "confidence": 0.99527997,
+   "speaker": "A"
+  },
+  {
+   "text": "así?",
+   "start": 43560,
+   "end": 43960,
+   "confidence": 0.99902344,
+   "speaker": "A"
+  },
+  {
+   "text": "Claro,",
+   "start": 44760,
+   "end": 45360,
+   "confidence": 0.9819336,
+   "speaker": "B"
+  },
+  {
+   "text": "medimos",
+   "start": 45360,
+   "end": 45800,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "horas",
+   "start": 45800,
+   "end": 46160,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "antes",
+   "start": 46160,
+   "end": 46440,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 46440,
+   "end": 46560,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "después",
+   "start": 46560,
+   "end": 47000,
+   "confidence": 0.91031903,
+   "speaker": "B"
+  },
+  {
+   "text": "y",
+   "start": 47000,
+   "end": 47200,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "también",
+   "start": 47200,
+   "end": 47440,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "los",
+   "start": 47440,
+   "end": 47720,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "errores,",
+   "start": 47720,
+   "end": 48200,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "o",
+   "start": 49000,
+   "end": 49320,
+   "confidence": 0.9941406,
+   "speaker": "B"
+  },
+  {
+   "text": "sea,",
+   "start": 49320,
+   "end": 49640,
+   "confidence": 0.9926758,
+   "speaker": "B"
+  },
+  {
+   "text": "si",
+   "start": 49640,
+   "end": 49880,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "el",
+   "start": 49880,
+   "end": 50000,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "proceso",
+   "start": 50000,
+   "end": 50320,
+   "confidence": 0.99820966,
+   "speaker": "B"
+  },
+  {
+   "text": "baja",
+   "start": 50320,
+   "end": 50680,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "de",
+   "start": 50680,
+   "end": 50760,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "10",
+   "start": 50760,
+   "end": 51000,
+   "confidence": 0.99976,
+   "speaker": "B"
+  },
+  {
+   "text": "horas",
+   "start": 51000,
+   "end": 51280,
+   "confidence": 0.99902344,
+   "speaker": "B"
+  },
+  {
+   "text": "a",
+   "start": 51280,
+   "end": 51400,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "4,",
+   "start": 51400,
+   "end": 51800,
+   "confidence": 0.98958,
+   "speaker": "B"
+  },
+  {
+   "text": "eso",
+   "start": 51880,
+   "end": 52160,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "se",
+   "start": 52160,
+   "end": 52320,
+   "confidence": 0.9995117,
+   "speaker": "B"
+  },
+  {
+   "text": "reporta",
+   "start": 52320,
+   "end": 52800,
+   "confidence": 0.99975586,
+   "speaker": "B"
+  },
+  {
+   "text": "cada",
+   "start": 52800,
+   "end": 52960,
+   "confidence": 1,
+   "speaker": "B"
+  },
+  {
+   "text": "mes.",
+   "start": 52960,
+   "end": 53240,
+   "confidence": 0.99853516,
+   "speaker": "B"
+  },
+  {
+   "text": "Perfecto,",
+   "start": 54430,
+   "end": 54830,
+   "confidence": 0.8889974,
+   "speaker": "A"
+  },
+  {
+   "text": "eso",
+   "start": 55630,
+   "end": 55990,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "es",
+   "start": 55990,
+   "end": 56230,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "todo",
+   "start": 56230,
+   "end": 56430,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "por",
+   "start": 56430,
+   "end": 56630,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "hoy,",
+   "start": 56630,
+   "end": 56990,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "te",
+   "start": 56990,
+   "end": 57150,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "avisamos",
+   "start": 57150,
+   "end": 57670,
+   "confidence": 0.91031903,
+   "speaker": "A"
+  },
+  {
+   "text": "la",
+   "start": 57670,
+   "end": 57830,
+   "confidence": 1,
+   "speaker": "A"
+  },
+  {
+   "text": "próxima",
+   "start": 57830,
+   "end": 58230,
+   "confidence": 0.9995117,
+   "speaker": "A"
+  },
+  {
+   "text": "semana.",
+   "start": 58230,
+   "end": 58590,
+   "confidence": 0.9998372,
+   "speaker": "A"
+  }
+ ]
+}
