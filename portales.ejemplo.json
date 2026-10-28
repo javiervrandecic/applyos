@@ -1,0 +1,29 @@
+{
+  "_comentario": "Copia a portales.json (está en el .gitignore) y ajusta. Lo leen scripts/getonbrd-sweep.js y scripts/delta.js. Los términos de este ejemplo son para un perfil de automatización e integraciones, cámbialos por los tuyos.",
+  "ventanaDias": 15,
+  "getonbrd": {
+    "porPagina": 30,
+    "maxPaginas": 5,
+    "terminos": {
+      "A_soluciones": ["solutions engineer", "implementation consultant", "preventa"],
+      "B_adopcion": ["transformacion digital", "adopcion tecnologica", "project manager innovacion"],
+      "C_automatizacion": ["automatizacion", "integraciones", "webhooks", "RevOps", "CRM"],
+      "puente": ["analista de procesos", "business analyst"]
+    }
+  },
+  "linkedin": {
+    "ubicaciones": ["Argentina", "Latin America"],
+    "terminosPorTitulo": ["integration engineer", "automation engineer", "solutions engineer", "analista de integraciones", "implementation engineer"],
+    "parametros": "f_TPR=r1296000&sortBy=DD",
+    "pausaSegundosEntreBusquedas": 2
+  },
+  "computrabajo": {
+    "subdominio": "ar",
+    "slugs": ["automatizacion", "integraciones", "transformacion-digital"],
+    "paginas": 5
+  },
+  "reintentos": {
+    "intentos": 2,
+    "pausaSegundos": 8
+  }
+}

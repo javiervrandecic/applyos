@@ -22,8 +22,8 @@ La skill lee este archivo para decidir el calce de cada aviso.
 
 Lista de sistemas que construiste y que alguien puede abrir, ver o correr. Esto pesa más que cualquier adjetivo del CV.
 
-- <nombre del proyecto> — <qué resuelve> — <link o demo>
-- <nombre del proyecto> — <qué resuelve> — <link o demo>
+- <nombre del proyecto> · <qué resuelve> · <link o demo>
+- <nombre del proyecto> · <qué resuelve> · <link o demo>
 
 ## Expectativa de renta
 
@@ -76,6 +76,33 @@ Ajusta estas listas a tu perfil. La skill las usa para priorizar y para descarta
 - <disciplinas que no son la tuya aunque el título suene parecido>
 - <niveles que serían paso atrás>
 - <requisitos excluyentes que definitivamente no cumples>
+
+---
+
+## Familias de cargo
+
+La skill clasifica cada aviso por lo que pide la descripción, no por su título. Define tus familias como funciones, no como títulos. Tres o cuatro alcanzan.
+
+- **A.** <ej. soluciones, preventa e implementación>
+- **B.** <ej. adopción, habilitación y transformación>
+- **C.** <ej. automatización, operaciones de ingresos y CRM>
+- **D. Complementaria, nunca foco.** <ej. docencia>
+
+Si un aviso no cae en ninguna, se descarta aunque pague bien.
+
+## Categoría puente (opcional)
+
+Cargos de menor nivel que aceptarías por un tiempo para ganar algo concreto, por ejemplo experiencia corporativa o estabilidad. Si no la quieres, borra la sección y la skill no mostrará el bloque.
+
+- **Qué entra:** <ej. junior o analista, solo si el contenido cae en tus familias>
+- **Qué no entra:** <ej. prácticas profesionales>
+- **Renta para este bloque:** <piso y monto a declarar, distintos de tu ancla normal>
+- **Por cuánto tiempo:** <ej. 12 a 18 meses>
+
+## Movilidad
+
+- **Ciudadanías o permisos de trabajo:** <países>
+- **¿Te mudarías?** <sí, no, o solo a ciertos lugares>. Si no, los cargos que exigen residir en otro país se registran como descarte por ubicación aunque digan "remoto".
 
 ---
 

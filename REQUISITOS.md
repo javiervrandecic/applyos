@@ -109,8 +109,9 @@ git --version      # opcional
 claude --version   # solo si vas por el camino completo
 npm install        # dentro de la carpeta del repo
 node scripts/getonbrd-sweep.js "AI engineer"
+node herramientas/escanear.js herramientas   # debe decir "sin hallazgos"
 ```
 
-Si el último comando te devuelve avisos, el barrido está funcionando y el resto es configuración, no instalación.
+Si el barrido te devuelve avisos, el barrido está funcionando y el resto es configuración, no instalación.
 
 Si algo falla, la sección de problemas comunes de [`GUIA.md`](GUIA.md) cubre los errores más frecuentes.

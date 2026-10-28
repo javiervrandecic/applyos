@@ -1,6 +1,6 @@
 {
   "name": "applyos",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sistema de busqueda de empleo asistido por IA. Barre portales, analiza el calce leyendo la descripcion completa en vez del titulo, y reporta el embudo etapa por etapa.",
   "type": "commonjs",
   "engines": {
@@ -8,15 +8,21 @@
   },
   "scripts": {
     "sweep": "node scripts/getonbrd-sweep.js",
-    "pdf": "node scripts/dashboard-pdf.js"
+    "pdf": "node scripts/dashboard-pdf.js",
+    "delta": "node scripts/delta.js",
+    "escanear": "node herramientas/escanear.js",
+    "escanear:historial": "node herramientas/escanear.js --historial"
   },
   "dependencies": {
     "ws": "^8.18.0"
   },
-  "keywords": ["job-search", "ai-agents", "automation", "claude-code", "n8n", "llm"],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ubermancl/applyos.git"
-  }
+  "keywords": [
+    "job-search",
+    "ai-agents",
+    "automation",
+    "claude-code",
+    "n8n",
+    "llm"
+  ],
+  "license": "MIT"
 }

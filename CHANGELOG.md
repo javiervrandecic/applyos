@@ -1,0 +1,45 @@
+# Cambios
+
+Historia de versiones de applyOS. Las fechas son de publicación.
+
+## 1.1.0 · 2026-10-28
+
+Tres meses de uso real desde la primera versión. La metodología cambió más que los scripts.
+
+### Metodología (skill `/empleos`)
+- **Clasificación por familias de función.** Cada aviso se ubica según lo que pide la descripción, no según su título. Si no cae en ninguna familia de tu perfil, se descarta aunque pague bien.
+- **Barrido delta.** Cada barrido se compara contra el anterior para revisar a fondo solo lo nuevo, con chequeos contra salidas viejas.
+- **Cruce contra el tracker por palabra distintiva de la empresa**, sin sufijos legales ni país, y la regla inversa. Empresa conocida no es cargo cubierto.
+- **Categoría puente opcional** para cargos de menor nivel que aceptarías por un tiempo, con su propia renta y en un bloque aparte.
+- **Pendientes de decisión.** Los calces sin decidir de barridos anteriores se listan en cada informe para que no desaparezcan.
+- **Bloqueos 403 y 429.** Reintento con pausa, cambio de método y reporte explícito como BLOQUEADO. Un cero ya no se registra como "no hay avisos".
+- **Registro obligatorio de cada barrido**, incluso de un chequeo rápido, con conteos y profundidad de paginación por término.
+- **Verificación en dos niveles ampliada.** Cuándo el código en un aviso baja el calce, "o afines" no es inclusivo por defecto, chequeo de techo explícito, y no confiar en el resumen de un subagente sin releer el detalle.
+- **LinkedIn.** Límite de unas 25 búsquedas seguidas, paginación reportada con números, avisos cerrados que solo se ven con sesión iniciada.
+- **Postulación.** Detección del canal por correo, paso de palabras clave ATS sin mentir, nunca marcar como enviado sin confirmación.
+- **Portales.** Descubrimiento medido por portal y conversión medida por vía de entrada. APIs públicas de Ashby y Workable para el detalle real.
+- **Registro de mejoras** dentro de la skill, que se lee al empezar y se actualiza al terminar.
+
+### Scripts
+- `scripts/getonbrd-sweep.js` lee términos y ventana desde `portales.json`, filtra por días, excluye talent pool, reintenta ante 403 y 429, y reporta resultados y páginas por término.
+- `scripts/delta.js` nuevo. Barrido delta y cruce contra el tracker.
+- `herramientas/escanear.js` nuevo. Escáner de secretos y datos personales, sin dependencias, con lista negra y archivos de claves externos que nunca se imprimen.
+- `herramientas/pre-commit` nuevo. Hook que corre el escáner antes de cada commit.
+
+### Documentación
+- Lecciones 11 a 16 en `LECCIONES.md`.
+- Las plantillas pasan de `.example` a `.ejemplo` (perfil, portales, tracker, CV, dashboard y lecciones de entrevistas). Si ya tenías copias, no cambia nada, porque tus archivos personales no llevan sufijo.
+- Nuevo `portales.ejemplo.json` para los scripts.
+- Perfil de ejemplo con familias, categoría puente y movilidad. Tracker de ejemplo con columna de decisión y registro de barridos más completo.
+- Guía con barrido delta y una sección para publicar tu propia versión sin filtrar datos.
+- Se quitan del repo los datos de contacto personales. Para dudas y mejoras, issues y PR.
+
+## 1.0.0 · 2026-08-05
+
+Primera versión pública.
+
+- Skill `/empleos` con barrido de Get on Board, LinkedIn y portales locales, verificación en dos niveles y deduplicación por empresa.
+- Barrido de Get on Board en Node y PowerShell, generador de PDF del dashboard de embudo.
+- Plantillas de perfil, portales, tracker y CV maestro, más un perfil de ejemplo lleno.
+- Guía paso a paso, requisitos y lecciones 1 a 10.
+- Ciclo de entrevistas. Preparación, grabación y evaluación.

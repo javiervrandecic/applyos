@@ -21,9 +21,9 @@ La persona de este ejemplo no existe. Los números son inventados.
 
 ## Pruebas verificables
 
-- **Conector SAP a Shopify** — sincroniza stock y precios cada 15 minutos entre un ERP sin API moderna y tres tiendas. Bajó los quiebres de stock de 40 al mes a 3 — repo privado, puedo mostrarlo en llamada
-- **Bot de conciliación bancaria** — parsea cartolas de 4 bancos y concilia contra facturas. Ahorra 12 horas semanales al área de finanzas — demo grabada, link
-- **Dashboard de operaciones** — [link público]
+- **Conector SAP a Shopify.** Sincroniza stock y precios cada 15 minutos entre un ERP sin API moderna y tres tiendas. Bajó los quiebres de stock de 40 al mes a 3. Repo privado, puedo mostrarlo en llamada
+- **Bot de conciliación bancaria.** Parsea cartolas de 4 bancos y concilia contra facturas. Ahorra 12 horas semanales al área de finanzas. Demo grabada, link
+- **Dashboard de operaciones.** [link público]
 
 ## Expectativa de renta
 
@@ -78,6 +78,27 @@ Pido mi tarifa siempre, aunque el aviso publique menos.
 - Frontend puro. React o Next.js como requisito principal
 - Ventas enterprise sin componente técnico
 - Junior, trainee o práctica profesional
+
+---
+
+## Familias de cargo
+
+- **A. Integración y soluciones.** Conectar sistemas, implementar plataformas, preventa técnica.
+- **B. Automatización de procesos.** Low-code, RPA ligero, flujos entre áreas.
+- **C. Operaciones de ingresos.** RevOps, CRM, datos comerciales.
+- **D. Complementaria.** Talleres y docencia, nunca como foco.
+
+## Categoría puente
+
+- **Qué entra:** analista de integraciones o de procesos en empresa grande, solo si el contenido cae en A, B o C
+- **Qué no entra:** prácticas, soporte de primer nivel
+- **Renta para este bloque:** USD 2.400 al mes como piso, declarar USD 2.600
+- **Por cuánto tiempo:** 12 meses, para sumar experiencia en empresa grande
+
+## Movilidad
+
+- **Ciudadanías:** argentina e italiana
+- **¿Me mudaría?** No por ahora. Los cargos que exigen residir en Europa se descartan por ubicación, aunque digan remoto.
 
 ---
 

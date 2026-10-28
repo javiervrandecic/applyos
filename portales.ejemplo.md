@@ -6,7 +6,7 @@ applyOS nació con portales de Chile, pero la arquitectura no depende de eso. Ca
 
 ---
 
-## 1. Get on Board — todo LATAM
+## 1. Get on Board, todo LATAM
 
 Es la mejor fuente del sistema, porque tiene **API pública sin autenticación** y hace búsqueda de texto completo, así que los términos de stack sí encuentran.
 
@@ -16,11 +16,13 @@ https://www.getonbrd.com/api/v0/search/jobs?query=<término>&per_page=30&page=<n
 
 Cubre Chile, Argentina, Perú, Colombia, México, Uruguay, Ecuador y remoto LATAM. No hay que configurar país, los avisos traen `remote`, `remote_zone` y `countries`.
 
-Lo corre `scripts/getonbrd-sweep.js` sin configuración.
+Lo corre `scripts/getonbrd-sweep.js`, que toma los términos de `portales.json`.
+
+**Trampas de la API.** `rejected_reasons` no vacío es un talent pool, no una vacante. `countries` suele decir solo "Remote" aunque haya restricción de país. Y el nombre de la empresa a veces viene vacío. Ver lección 14.
 
 ---
 
-## 2. LinkedIn — global
+## 2. LinkedIn, global
 
 Funciona en cualquier país cambiando `location`. Endpoint público, sin login.
 
@@ -38,7 +40,7 @@ Valores de `location` que funcionan: nombre del país en inglés (`Chile`, `Mexi
 
 ---
 
-## 3. Computrabajo — LATAM, con subdominio por país
+## 3. Computrabajo, LATAM con subdominio por país
 
 El buscador `?q=` no filtra bien. Hay que usar el slug de la palabra clave.
 
@@ -72,7 +74,43 @@ Casi todos los mercados tienen uno que no está en ningún agregador. Agrega el 
 
 ---
 
-## 5. Fuentes que no son portales
+## 5. Empresas con ATS de API pública
+
+Cuando una empresa publica en Ashby o Workable, su API pública trae el aviso real con país elegible y URL oficial de postulación, cosas que los agregadores no muestran.
+
+```
+https://api.ashbyhq.com/posting-api/job-board/<empresa>
+https://apply.workable.com/api/v1/widget/accounts/<empresa>
+```
+
+---
+
+## 6. Buscadores generales y agregadores
+
+Sirven para **descubrir** empresas y cargos que los portales no traen, nunca para cerrar un veredicto. Si algo aparece, busca la misma vacante en su fuente original.
+
+Anota acá los que te den problemas para no perder tiempo con ellos.
+
+| Tipo | Problema típico | Qué hacer |
+|---|---|---|
+| Agregadores que reindexan avisos | muchos links vencidos (404 o 410) | verificar que el aviso siga vivo en la fuente |
+| Portales que renderizan solo con JavaScript | la lectura web devuelve la página vacía | revisarlo a mano en el navegador |
+| Portales con detalle que redirige | el listado se lee, el detalle no | usarlo para descubrir y leer el detalle en otra fuente |
+
+---
+
+## 7. Bloqueos y límites
+
+Casi todos los portales bloquean o limitan de vez en cuando. Un cero en un portal que normalmente trae resultados es un bloqueo, no un mercado vacío.
+
+- Reintenta una vez con pausa. `portales.json` define cuántos intentos y cuántos segundos.
+- Si sigue, cambia de método. Un script con cabecera de navegador suele funcionar donde la lectura web del agente da 403, y al revés.
+- En LinkedIn, pon una pausa entre búsquedas y separa los bloques grandes. Después de unas 25 búsquedas seguidas devuelve 0 o 10 sin dar error.
+- Si nada funciona, anótalo como BLOQUEADO en el registro de barridos, con lo que intentaste.
+
+---
+
+## 8. Fuentes que no son portales
 
 Los mejores hallazgos muchas veces no vienen del buscador de empleos.
 
@@ -84,8 +122,8 @@ Los mejores hallazgos muchas veces no vienen del buscador de empleos.
 
 ---
 
-## Ciudadanía y derecho a trabajo
+## Ciudadanía, derecho a trabajo y mudanza
 
-Si tienes pasaporte o residencia de otro país, ponlo en `perfil.md`. Abre mercados enteros que de otra forma el barrido descarta por ubicación.
+Si tienes pasaporte o residencia de otro país, ponlo en `perfil.md`. Abre mercados enteros que de otra forma el barrido descarta por ubicación. Y si no te mudarías, dilo también. Un cargo "remoto" que exige residir en otro país es un descarte por ubicación, aunque el título diga remoto.
 
 Y ojo con esto. **el filtro "Remote" de LinkedIn devuelve el país de la oficina, no la modalidad.** Para remoto de verdad hay que leer el detalle o usar portales que lo modelen como campo. Ver lección 4.

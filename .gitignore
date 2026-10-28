@@ -2,24 +2,33 @@
 perfil.md
 portales.md
 tracker.md
+portales.json
+mejoras-skill.md
 
-# CV real (la plantilla .example sí se versiona)
+# CV real (la plantilla .ejemplo sí se versiona)
 cv/cv-maestro*.html
-!cv/cv-maestro.example.html
+!cv/cv-maestro.ejemplo.html
 cv/*.pdf
 
-# Dashboard con datos reales (el .example sí se versiona)
+# Dashboard con datos reales (el .ejemplo sí se versiona)
 dashboard/embudo.html
 dashboard/*.pdf
 
 # Entrevistas. lecciones y evaluaciones son personales.
 entrevistas/LECCIONES-ENTREVISTAS.md
-!entrevistas/LECCIONES-ENTREVISTAS.example.md
+!entrevistas/LECCIONES-ENTREVISTAS.ejemplo.md
 entrevistas/evaluaciones/
 
 # Salidas de los barridos
 resultados*.json
+barridos/
 procesos/
+
+# Configuración personal del escáner. Nunca se versiona.
+.escaner*
+lista-negra*.txt
+.env
+.env.*
 
 # ─── Sistema ───
 node_modules/

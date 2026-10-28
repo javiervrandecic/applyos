@@ -30,12 +30,12 @@ Tiene que decir `v22.x.x` o mayor. Si dice v20 o menos, el barrido va a funciona
 ## 2. Descarga el repo
 
 ```bash
-git clone https://github.com/ubermancl/applyos.git
+git clone https://github.com/<usuario>/applyos.git
 cd applyos
 npm install
 ```
 
-Si no tienes git, baja el ZIP desde el botón verde **Code** de GitHub y descomprímelo.
+Reemplaza `<usuario>` por la cuenta desde donde clonas el repo. Si no tienes git, baja el ZIP desde el botón verde **Code** de GitHub y descomprímelo.
 
 `npm install` instala una sola dependencia, y solo la necesita el generador de PDF.
 
@@ -103,11 +103,13 @@ Copia la skill y las plantillas desde el repo:
 
 ```bash
 cp ../applyos/skill/empleos.md          .claude/commands/
-cp ../applyos/perfil.example.md         perfil.md
-cp ../applyos/portales.example.md       portales.md
-cp ../applyos/tracker.example.md        tracker.md
-cp ../applyos/cv/cv-maestro.example.html cv-maestro.html
+cp ../applyos/perfil.ejemplo.md         perfil.md
+cp ../applyos/portales.ejemplo.md       portales.md
+cp ../applyos/portales.ejemplo.json     portales.json
+cp ../applyos/tracker.ejemplo.md        tracker.md
+cp ../applyos/cv/cv-maestro.ejemplo.html cv-maestro.html
 cp ../applyos/cv/ESTANDAR-CV.md         .
+mkdir -p barridos
 ```
 
 ## 6. Llena `perfil.md`
@@ -116,7 +118,7 @@ cp ../applyos/cv/ESTANDAR-CV.md         .
 
 Mira [`perfil.ejemplo-lleno.md`](perfil.ejemplo-lleno.md) para ver cómo se ve uno completo antes de escribir el tuyo.
 
-Las cuatro secciones que más pesan:
+Las secciones que más pesan.
 
 **Qué quieres hacer realmente.** No el título del cargo, la función. "Conectar negocio con tecnología" es distinto de "programar", aunque los dos avisos digan "AI Engineer".
 
@@ -124,11 +126,15 @@ Las cuatro secciones que más pesan:
 
 **Zonas de calce.** Los títulos donde eres candidato natural, los que requieren explicar un puente, y los que son SKIP en bloque. Sé específico. "Data Scientist que pida PhD" es útil, "cargos técnicos" no.
 
+**Familias de cargo.** Tres o cuatro funciones, no títulos. La skill clasifica cada aviso por lo que pide la descripción y descarta lo que no cae en ninguna, aunque pague bien.
+
+**Categoría puente.** Opcional. Cargos de menor nivel que aceptarías por un tiempo, con su propia renta. Si no la defines, la skill no los muestra.
+
 **El límite superior.** Hasta qué nivel de seniority tiene sentido postular. Definir el techo evita quemar tiempo en cargos que piden 10 años cuando tienes 4.
 
-## 7. Llena `portales.md`
+## 7. Llena `portales.md` y `portales.json`
 
-Viene configurado para Chile y LATAM. Si buscas en otro país:
+El `.md` es la guía que lee la skill, con las trampas de cada portal. El `.json` tiene los términos y parámetros que leen los scripts. Vienen configurados para LATAM. Si buscas en otro país.
 
 - **Get on Board** ya cubre todo LATAM, no toques nada
 - **LinkedIn** cambia el valor de `location` por tu país en inglés
@@ -156,9 +162,20 @@ Y escribe:
 /empleos
 ```
 
-La primera vez va a demorar varios minutos. Barre los portales, deduplica, verifica los prometedores en detalle y te presenta los que calzan ordenados por zona.
+La primera vez va a demorar varios minutos. Barre los portales, deduplica, verifica los prometedores en detalle y te presenta los que calzan ordenados por calce, con los pendientes de decisión de barridos anteriores al final.
 
-**Qué esperar.** De un barrido de 80 a 100 avisos, normalmente sobreviven entre 2 y 5. Si te devuelve 30 candidatos, tu `perfil.md` está demasiado permisivo. Si te devuelve cero varias veces seguidas, está demasiado estricto o tus zonas de calce no coinciden con cómo el mercado nombra los cargos.
+**Qué esperar.** De un barrido de 80 a 100 avisos, normalmente sobreviven entre 2 y 5. Si te devuelve 30 candidatos, tu `perfil.md` está demasiado permisivo. Si te devuelve cero varias veces seguidas, está demasiado estricto o tus familias no coinciden con cómo el mercado describe los cargos.
+
+### El barrido delta
+
+Desde el segundo barrido conviene mirar solo lo nuevo. Guarda cada salida con fecha y compárala con la anterior.
+
+```bash
+node scripts/getonbrd-sweep.js --dias 15 --json > barridos/gob-2026-03-12.json
+node scripts/delta.js barridos/gob-2026-03-12.json barridos/gob-2026-03-10.json --tracker tracker.md
+```
+
+Cada aviso sale como NUEVO o como EMPRESA CONOCIDA. La segunda no se descarta sola, compara el título contra lo que ya tienes registrado de esa empresa. Si el script avisa que el archivo es viejo o que los dos son idénticos, el barrido no corrió.
 
 ## 10. Prepara una postulación
 
@@ -223,8 +240,11 @@ CHROME_PATH="/ruta/a/chrome" node scripts/dashboard-pdf.js dashboard/embudo.html
 **El PDF sale con la URL y la fecha impresas en cada página**
 Estás usando el flag `--print-to-pdf` de Chrome en vez del script. Ese flag no respeta la opción de quitar el encabezado. Usa `scripts/dashboard-pdf.js`, que lo hace por el protocolo de depuración.
 
-**Un portal devuelve vacío o da error 403**
-Bloqueo intermitente de scraping, le pasa sobre todo a Computrabajo. Reintenta una vez y si sigue, revísalo a mano en el navegador. No lo saltes en silencio.
+**Un portal devuelve vacío o da error 403 o 429**
+Bloqueo o límite de peticiones. Reintenta una vez con pausa, después cambia de método (script con cabecera de navegador, la lectura web del agente o un endpoint alternativo), y solo si los dos fallan revísalo a mano en el navegador. No lo saltes en silencio y no lo anotes como cero avisos. El barrido de Get on Board ya reintenta solo y marca BLOQUEADO en el reporte por término. Lección 11.
+
+**El delta dice 0 nuevos**
+Casi siempre es una salida vieja. Revisa la hora del archivo y que el barrido haya corrido de verdad. Lección 12.
 
 **El barrido devuelve avisos que no tienen nada que ver**
 Tus términos de búsqueda son muy amplios, o tus zonas de calce en `perfil.md` están mal definidas. Empieza por afinar la lista de SKIP en bloque.
@@ -234,3 +254,35 @@ Es esperado y no es tu culpa. Su buscador pesa el título del cargo y no matchea
 
 **`/empleos` no aparece en Claude Code**
 La skill tiene que estar en `.claude/commands/empleos.md` **dentro de la carpeta desde donde abriste Claude Code**, no en el repo.
+
+---
+
+# Publicar tu propia versión sin filtrar datos
+
+Si haces un fork y lo publicas, lo más fácil es que se cuele algo tuyo. Un correo en un ejemplo, una ruta de tu computador, el nombre de una empresa donde postulaste o una clave en un script.
+
+El repo trae un escáner que lo revisa y un hook que lo corre antes de cada commit.
+
+```bash
+cp herramientas/pre-commit .git/hooks/pre-commit
+node herramientas/escanear.js              # revisa el árbol completo
+node herramientas/escanear.js --historial  # revisa todos los commits
+```
+
+Detecta claves de API y tokens de los servicios más comunes, contraseñas asignadas, URLs con usuario y clave, correos, teléfonos, rutas de usuario y cadenas de alta entropía.
+
+Para que además frene **tus** nombres y **tus** claves, crea dos cosas fuera del repo.
+
+- **Una lista negra**, un archivo de texto con una palabra o frase por línea. Tu nombre, tu usuario, las empresas de tu tracker, tus montos de renta.
+- **Tus archivos de claves**, por ejemplo tu `.env`. El escáner los lee solo en memoria y avisa si algún valor, o un fragmento de 8 o más caracteres, aparece en lo que vas a publicar. Nunca imprime el valor, solo el nombre de la variable y la línea donde está definida.
+
+Y apúntalos desde `.git/escaner.conf`, que vive dentro de `.git` y no se publica.
+
+```sh
+ESCANER_LISTA_NEGRA="/ruta/a/lista-negra.txt"
+ESCANER_ARCHIVOS_SECRETOS="/ruta/a/.env"
+```
+
+Si un hallazgo es un ejemplo inventado a propósito, agrega `escaner:permitir` en esa línea.
+
+**El escáner no reemplaza leer el diff.** Detecta patrones, no intenciones. Antes de publicar, lee lo que vas a subir.
