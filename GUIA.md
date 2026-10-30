@@ -2,6 +2,70 @@
 
 De cero a tu primer barrido. Si sigues los pasos en orden no deberías tener problemas.
 
+## Antes de todo. Claude Code en tu computador
+
+applyOS corre sobre **[Claude Code](https://claude.com/claude-code)**. Si nunca lo has usado, sigue estos pasos. Son 10 minutos.
+
+### 1. Ten una cuenta de Claude que incluya Claude Code
+
+Crea tu cuenta en [claude.ai](https://claude.ai). El **plan gratis no incluye Claude Code**. Necesitas Pro, Max, Team o Enterprise, o una cuenta de la Console de Anthropic que se paga por uso. Para empezar, el plan Pro alcanza.
+
+### 2. Elige cómo lo vas a usar
+
+| Si... | Usa | Cómo se instala |
+|---|---|---|
+| Nunca has abierto una terminal | **La app de escritorio de Claude** | Descárgala desde [claude.com/download](https://claude.com/download) (Windows o Mac), instálala como cualquier programa, entra con tu cuenta y abre la pestaña **Code** |
+| Ya usas VS Code o Cursor | **La extensión de Claude Code** | En el editor abre el panel de extensiones, busca "Claude Code" (de Anthropic) e instálala |
+| Te manejas con la terminal | **Claude Code en la terminal** | Con el comando del paso 3 |
+
+Ojo con Cursor. Lo que corre applyOS es la **extensión de Claude Code** dentro de Cursor, no el chat propio de Cursor, que no lee estas skills.
+
+### 3. Si elegiste la terminal, instálalo
+
+Abre la terminal y pega el comando de tu sistema. No necesitas ser administrador.
+
+- **Windows.** Busca "PowerShell" en el menú Inicio y ábrelo. Sabes que estás en PowerShell porque la línea empieza con `PS C:\`.
+
+  ```powershell
+  irm https://claude.ai/install.ps1 | iex
+  ```
+
+- **Mac.** Abre la app Terminal (Cmd + Espacio y escribe "Terminal").
+
+  ```bash
+  curl -fsSL https://claude.ai/install.sh | bash
+  ```
+
+- **Linux.** El mismo comando de Mac.
+
+El comando no muestra avance mientras descarga, espera a que termine. Después **cierra la terminal y abre una nueva**, y comprueba que quedó instalado.
+
+```bash
+claude --version
+```
+
+Tiene que responder un número de versión. Si dice que `claude` no se reconoce, la carpeta de instalación no quedó en el PATH. La [guía oficial de problemas de instalación](https://code.claude.com/docs/en/troubleshoot-install) tiene la solución para cada error. `claude doctor` también revisa la instalación y te dice qué arreglar.
+
+En Windows conviene instalar también [Git para Windows](https://git-scm.com/downloads/win). No es obligatorio, pero Claude Code trabaja mejor con él, y applyOS lo usa para clonar el repo. Si no lo tienes, Claude te lo puede instalar en el paso siguiente.
+
+### 4. Entra con tu cuenta
+
+Crea una carpeta para tu búsqueda de empleo (por ejemplo `busqueda-empleo` en tus Documentos), ábrela en la terminal y escribe `claude`. La primera vez se abre el navegador para que entres con tu cuenta de Claude. Aceptas y vuelves a la terminal.
+
+En la app de escritorio o en la extensión, entras con tu cuenta al abrirla y eliges esa misma carpeta como carpeta de trabajo.
+
+Fuente de los comandos y requisitos: [documentación oficial de instalación](https://code.claude.com/docs/en/setup), revisada el 30-10-2026. Si algún comando cambió, manda la documentación oficial.
+
+### No instales nada más a mano
+
+Con Claude Code abierto, **pídele a Claude que instale el resto**. Revisa qué tienes, instala lo que falta (Node.js, git, las dependencias del repo, las skills) y te avisa antes de cada paso. Copia y pega esto:
+
+> Instala lo que applyOS necesita en este computador. Revisa si tengo Node.js 22 o superior y git, e instala lo que falte. Después clona https://github.com/<usuario>/applyos.git, corre npm install, instala las skills con el instalador del repo y prueba un barrido de Get on Board con "AI engineer". Antes de instalar cada cosa dime qué vas a instalar y para qué.
+
+Si prefieres hacerlo tú, los pasos manuales siguen abajo.
+
+---
+
 Hay **dos caminos**. Empieza por el rápido para confirmar que todo funciona, y después arma el completo.
 
 | | Camino rápido | Camino completo |
@@ -145,7 +209,7 @@ El `.md` es la guía que lee la skill, con las trampas de cada portal. El `.json
 
 ## 8. Llena tu CV maestro
 
-`cv-maestro.html` es la fuente desde la que se genera cada versión adaptada. Léelo junto con `ESTANDAR-CV.md`, que explica por qué el formato es así (los filtros ATS leen mal las tablas y las columnas).
+`cv-maestro.html` es la fuente desde la que se genera cada versión adaptada. Si postulas también en inglés, crea `cv-maestro-en.html` con el mismo contenido y declara su ruta en `cv_maestro_en`. No lo tienes que dejar perfecto el primer día. El maestro crece con cada postulación. Léelo junto con `ESTANDAR-CV.md`, que explica por qué el formato es así (los filtros ATS leen mal las tablas y las columnas).
 
 Regla que no conviene romper. **el nivel que declaras es el nivel real.** Hay cargos donde intermedio alcanza perfecto.
 

@@ -21,6 +21,16 @@ Mantén **un CV maestro por idioma** con todo tu material. De ahí sale cada ver
 - Nunca generes un CV adaptado a partir de otro CV adaptado. Se arrastran recortes viejos y datos desactualizados.
 - Educación y certificaciones se copian **siempre del maestro**, nunca de una versión anterior.
 - El maestro puede tener 4 páginas. La versión que envías, no.
+- El idioma del CV adaptado es el del aviso. Si el aviso está en inglés, sale del maestro en inglés, no de una traducción del adaptado en español.
+
+### El maestro crece con cada postulación
+
+Cada postulación obliga a revisar tu experiencia contra un aviso nuevo, y casi siempre aparece algo que el maestro no tenía. Una cifra que recordaste, un proyecto que no habías escrito, una herramienta que sí usaste pero no nombraste.
+
+- Si es nuevo y verificable, se agrega **al maestro**, no solo al CV adaptado. Si no, la próxima versión lo pierde.
+- Se agrega **en los dos idiomas** al mismo tiempo, para que no se desalineen.
+- Lo aprueba la persona antes de escribirlo. Nada entra al maestro sin confirmación.
+- Si una cifra se corrige, se corrige en el maestro y se anota qué CVs ya enviados llevaban la cifra vieja.
 
 ---
 

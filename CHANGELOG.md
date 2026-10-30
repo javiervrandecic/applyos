@@ -2,6 +2,24 @@
 
 Historia de versiones de applyOS. Las fechas son de publicación.
 
+## 1.2.2 · 2026-10-30
+
+### Documentación y skills
+- El README explica el CV adaptado a cada cargo, que sale de un maestro en español y otro en inglés en el idioma del aviso, y cómo el maestro se va actualizando con lo nuevo de cada postulación.
+- El README explica el playbook que se arma cuando avisas que conseguiste una entrevista.
+- `config.ejemplo.json` suma `cv_maestro_en`.
+- `applyos-postulacion` elige el maestro según el idioma del aviso y propone sumar al maestro el material nuevo, con aprobación.
+- `applyos-entrevista` se activa con "me llamaron para una entrevista" o "conseguí entrevista", mueve el tracker y arma el playbook sin que se lo pidan.
+- `ESTANDAR-CV.md` suma la sección "El maestro crece con cada postulación".
+- El README explica las respuestas de formularios desde tu perfil y la renta con anclas por mercado que suben con cada proceso.
+- El tracker de ejemplo suma "El piso sube, no baja" y la separación del mercado por idioma.
+- `PREPARACION.md` suma preguntas para sacarle al reclutador el presupuesto y la lectura del mercado.
+- `applyos-entrevista` incluye esas preguntas en el playbook y propone subir el piso cuando un proceso lo justifica.
+
+### Instalación
+- La guía parte por Claude Code con un paso a paso para quien nunca lo ha usado. Qué plan sirve (el gratis no), cuál opción elegir según tu experiencia (app de escritorio, extensión en VS Code o Cursor, o terminal), los comandos de instalación para Windows, Mac y Linux, cómo verificarla y cómo entrar con tu cuenta. Después trae un texto para pedirle a Claude que instale Node.js, git, las dependencias y las skills, avisando antes de cada paso.
+- README y `REQUISITOS.md` ponen Claude Code primero y aclaran que el resto lo puede instalar Claude.
+
 ## 1.2.1 · 2026-10-28
 
 ### Uso responsable

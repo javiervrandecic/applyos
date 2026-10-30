@@ -76,6 +76,10 @@ El mercado paga distinto por el mismo trabajo según cómo lo nombre. Ir con un 
 
 Actualízala cuando un proceso te confirme un rango real. Ese dato vale más que cualquier estudio de mercado, porque viene de tu propio mercado y de tu propio perfil.
 
+**El piso sube, no baja.** Si avanzaste a segunda entrevista o más en un proceso que declaró o aceptó una renta mayor que tu ancla, ese número pasa a ser tu piso para esa familia de cargo. Un proceso que avanzó con tu número es la prueba de que el mercado lo paga. Anota de dónde salió cada cambio (empresa, etapa y fecha) para saber después por qué subiste.
+
+**Separa el mercado por idioma.** Los cargos en inglés para empresas de afuera suelen pagar bastante más que los locales por el mismo trabajo. Si los mezclas en una sola ancla, te quedas corto en unos o te sales de rango en otros.
+
 ---
 
 ## Registro de barridos

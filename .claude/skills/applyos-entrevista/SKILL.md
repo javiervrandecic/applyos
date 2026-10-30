@@ -1,6 +1,6 @@
 ---
 name: applyos-entrevista
-description: Prepara una entrevista de trabajo (playbook por cargo con opener, tres historias, preguntas y renta) y evalúa la entrevista después con transcripción diarizada en AssemblyAI, métricas duras (% de habla, apertura, turnos largos, muletillas) y tabla de lecciones. Úsala cuando la persona diga "tengo una entrevista", "prepárame para esta entrevista", "evalúa mi entrevista", "diariza este audio" o entregue una grabación o transcripción de una entrevista.
+description: Prepara una entrevista de trabajo (playbook por cargo con opener, tres historias, preguntas y renta) y evalúa la entrevista después con transcripción diarizada en AssemblyAI, métricas duras (% de habla, apertura, turnos largos, muletillas) y tabla de lecciones. Úsala cuando la persona avise que consiguió una entrevista ("me llamaron para una entrevista", "conseguí entrevista con X", "me agendaron una entrevista") o diga "tengo una entrevista", "prepárame para esta entrevista", "evalúa mi entrevista", "diariza este audio" o entregue una grabación o transcripción de una entrevista.
 ---
 
 # applyOS. Entrevista, antes y después
@@ -14,6 +14,8 @@ Dos partes. La parte 1 prepara. La parte 2 evalúa con datos, no con la sensaci�
 
 ## Parte 1. Preparar (antes de la entrevista)
 
+Se activa apenas la persona cuenta que consiguió una entrevista, sin esperar a que pida el playbook. Primero mueve el proceso en `tracker.md` a `entrevista 1` o `entrevista 2` con la fecha, y pregunta la fecha, la hora y quién entrevista si no los dio.
+
 1. Lee el aviso completo y el perfil. Marca requisitos duros y deseables, que son el mapa de lo que van a preguntar.
 2. Investiga la empresa, quién entrevista y un hueco real de su producto.
 3. Arma un **playbook corto** por cargo, para leerlo bajo presión y no para estudiarlo. Solo frases literales y bullets.
@@ -21,7 +23,8 @@ Dos partes. La parte 1 prepara. La parte 2 evalúa con datos, no con la sensaci�
    - Tres historias (algo que construiste, algo que salió mal, algo donde tradujiste entre áreas) en menos de 2 minutos cada una.
    - Respuestas a las preguntas probables, sacadas de los requisitos duros.
    - Tres preguntas tuyas, ninguna de logística.
-   - La cifra de renta, decidida antes de entrar. Si no la tiene, pregúntala.
+   - La cifra de renta, decidida antes de entrar desde la tabla de anclas del tracker. Si no la tiene, pregúntala.
+   - Dos o tres preguntas para sacar el presupuesto del cargo y cómo ve el mercado quien entrevista (ver la sección de renta de `references/preparacion.md`).
 4. Cruza el playbook con las lecciones: ¿qué patrón activo hay que vigilar?
 5. Recuerda grabar (ver `references/grabacion.md`) y pedir consentimiento antes.
 6. Guarda el playbook en `entrevistas/playbooks/<empresa>-<fecha>.md`.
@@ -37,7 +40,7 @@ Dos partes. La parte 1 prepara. La parte 2 evalúa con datos, no con la sensaci�
 7. **Corrige máximo dos cosas**, cada una como comportamiento observable.
 8. **Verifica toda cita** contra el archivo fuente, incluida la atribución.
 9. **Guarda** la evaluación en `entrevistas/evaluaciones/<empresa>-<fecha>.md` y agrega una fila a la tabla de métricas del archivo de lecciones (siempre agregar, nunca reemplazar). Pasa un patrón a "confirmado" solo con evidencia de dos o más entrevistas independientes.
-10. **Tracker.** Registra el resultado y el próximo paso en `tracker.md`.
+10. **Tracker.** Registra el resultado y el próximo paso en `tracker.md`. Si la entrevista reveló un rango o un presupuesto, o si avanzaste con una renta mayor que tu ancla, propón actualizar la tabla de anclas y subir el piso de esa familia de cargo.
 
 Estructura de la evaluación y trampas al usar IA para evaluar en `references/evaluacion.md`.
 

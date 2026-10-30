@@ -46,6 +46,7 @@ Copia las carpetas de `.claude/skills/` a `~/.claude/skills/` (usuario) o a `<pr
   "perfil": "perfil.md",
   "tracker": "tracker.md",
   "cv_maestro": "cv/cv-maestro.html",
+  "cv_maestro_en": "cv/cv-maestro-en.html",
   "carpeta_entrevistas": "entrevistas",
   "carpeta_grabaciones": "~/grabaciones-entrevistas"
 }

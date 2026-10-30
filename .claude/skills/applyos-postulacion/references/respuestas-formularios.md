@@ -17,7 +17,7 @@ Modelo: "Llevo [años] automatizando [tipo de proceso] en [tipo de empresa]. Est
 Modelo (situación, qué hiciste tú, resultado con número): "Un equipo comercial perdía unas 20 horas semanales pasando datos entre dos sistemas. Diseñé e implementé la integración y la documenté para que el equipo la mantuviera. Las horas manuales bajaron en torno a un 40 %."
 
 ### Expectativa de renta
-Un número, no un rango, y aclara bruto o líquido. Decide el número antes de abrir el formulario. Ejemplo: "[monto] CLP líquidos mensuales, abierto a conversar según el alcance del cargo."
+Un número, no un rango, y aclara bruto o líquido. Decide el número antes de abrir el formulario. Sale de la tabla de anclas del tracker, según la familia del cargo y el mercado (local o internacional en inglés, en su moneda). Si un proceso reciente subió tu piso, usa el piso nuevo. Ejemplo: "[monto] CLP líquidos mensuales, abierto a conversar según el alcance del cargo."
 
 ### Disponibilidad
 "Inmediata" o "[X] semanas de aviso". Solo lo que es verdad.

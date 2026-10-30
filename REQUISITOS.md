@@ -4,6 +4,16 @@ Qué necesitas realmente para que todo corra sin problemas.
 
 ---
 
+## Lo primero. Claude Code
+
+| | |
+|---|---|
+| **[Claude Code](https://claude.com/claude-code)** | **De pago.** En la terminal, en la app de escritorio de Claude o como extensión en VS Code o Cursor |
+
+Con Claude Code instalado no necesitas instalar nada más a mano. Pídele que revise tu computador e instale Node.js, git y las dependencias. El texto para pedírselo está en la [guía](GUIA.md#no-instales-nada-más-a-mano).
+
+---
+
 ## Lo mínimo para el barrido
 
 Esto es lo único obligatorio y es muy poco.

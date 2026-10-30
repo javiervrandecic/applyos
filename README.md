@@ -42,6 +42,14 @@ Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con
 
 **No confunde un bloqueo con un mercado vacío.** Un 403 o un 429 se reintenta con pausa y con otro método, y si sigue fallando se reporta como BLOQUEADO, nunca como cero avisos.
 
+**Te arma un CV a la medida de cada cargo.** No mandas el mismo CV a todos lados. Mantienes un **CV maestro en español y otro en inglés** con todo tu material, y para cada aviso que eliges sale una versión adaptada en PDF, en el idioma del aviso, que sube lo que ese cargo valora y usa sus palabras para nombrar lo que ya hiciste. Nunca inventa. Y el maestro no queda congelado. Cada vez que en una postulación aparece una cifra, un proyecto o un logro nuevo y verificado, se propone sumarlo al maestro en los dos idiomas, así cada CV que sale es mejor que el anterior.
+
+**Te responde los formularios.** Las preguntas de los formularios de postulación (por qué este cargo, un proyecto del que estés orgulloso, nivel en tal herramienta, disponibilidad, expectativa de renta) salen de tu perfil, tu CV maestro y un banco de respuestas que crece con cada formulario nuevo. Son precisas porque usan tus hechos reales, y no se contradicen entre una postulación y otra.
+
+**Te ayuda a cobrar lo que vale el mercado, no lo que tú creías.** La expectativa de renta no es un número fijo. Sale de una tabla de anclas por familia de cargo y por mercado, porque un cargo remoto en inglés suele pagar bastante más que el mismo trabajo en el mercado local, y en roles nuevos como los de IA no hay una referencia establecida. Cada proceso te enseña algo. Si avanzas en uno con una renta más alta, ese número pasa a ser tu piso para los siguientes. Y el playbook de cada entrevista trae preguntas para sacarle al reclutador el presupuesto del cargo y cómo ve el mercado. Varios no lo dicen, pero los que sí, sobre todo cuando les gustó tu perfil, te dan el dato más valioso que vas a conseguir.
+
+**Te prepara cuando consigues una entrevista.** Le cuentas "me llamaron para una entrevista con tal empresa" y arma un **playbook** de ese cargo, corto y para leer bajo presión. Opener de 90 segundos, tres historias tuyas, respuestas a lo que probablemente te van a preguntar según los requisitos del aviso, tres preguntas para hacer y tu cifra de renta decidida antes de entrar. Lo cruza con tus errores de entrevistas anteriores y mueve el proceso en el tracker. Después de la entrevista, la evalúa con métricas sacadas de la grabación.
+
 **Registra todo.** Cada aviso tocado deja una fila con su motivo, y cada barrido deja una fila con portales, conteos y bloqueos. Los calces sin decisión vuelven a aparecer en cada informe hasta que decidas.
 
 **Reporta en embudo.** Analizados, postulados, contacto humano, primera entrevista, segunda entrevista. Con la conversión de cada etapa respecto de la anterior.
@@ -69,12 +77,14 @@ Cada etapa con su conversión respecto de la anterior, más el pipeline vivo con
 
 | Requisito | Para qué |
 |---|---|
-| **Node.js 22+** | los scripts de barrido, delta, escáner y PDF |
-| **[Claude Code](https://claude.com/claude-code)** | análisis de calce, CVs adaptados y reporte de embudo. **Es de pago** |
+| **[Claude Code](https://claude.com/claude-code)** | en la terminal, en la app de escritorio o como extensión en VS Code o Cursor. Hace el análisis de calce, los CVs adaptados y el reporte de embudo. **Es de pago** |
+| **Node.js 22+** | los scripts de barrido, delta, escáner y PDF. Claude Code te lo instala si no lo tienes |
 | Google Chrome | solo si quieres exportar el dashboard a PDF |
 | PowerShell 5.1+ | opcional, versión alternativa del barrido en Windows |
 
 No necesitas llaves de API. Todas las fuentes son endpoints públicos.
+
+**Lo único que instalas tú es Claude Code.** Después le pides que instale el resto (Node.js, git, dependencias y skills) y te avisa antes de cada paso. El texto para pedírselo está en la [guía](GUIA.md#no-instales-nada-más-a-mano).
 
 ### Qué funciona sin Claude Code
 
@@ -109,8 +119,8 @@ Detalle, instalación manual y solución de problemas en [`docs/INSTALACION-SKIL
 | Skill | Qué hace | Frases que la activan |
 |---|---|---|
 | `applyos-busqueda` | Barre portales, lee la descripción completa, clasifica el calce, deduplica contra el tracker y registra todo | "haz un barrido de empleos", "qué hay nuevo hoy", "¿este cargo calza conmigo?" |
-| `applyos-postulacion` | Tabla de requisitos, CV adaptado desde tu maestro, respuestas de formularios, correo listo y registro | "prepara la postulación a este cargo", "adapta mi CV a este aviso", "redacta el correo" |
-| `applyos-entrevista` | Playbook antes de la entrevista y evaluación después, con diarización y métricas | "tengo entrevista el jueves, prepárame", "evalúa esta entrevista", "diariza este audio" |
+| `applyos-postulacion` | Tabla de requisitos, CV adaptado a cada cargo desde tu maestro en español o inglés, actualización del maestro con lo nuevo, respuestas de formularios, correo listo y registro | "prepara la postulación a este cargo", "adapta mi CV a este aviso", "redacta el correo" |
+| `applyos-entrevista` | Playbook del cargo apenas avisas que conseguiste una entrevista, y evaluación después con diarización y métricas | "me llamaron para una entrevista", "conseguí entrevista con X", "tengo entrevista el jueves, prepárame", "evalúa esta entrevista" |
 | `applyos-embudo` | Reporte del embudo por etapa, dashboard, PDF e informe de cierre | "genera el reporte de embudo", "cómo va mi búsqueda", "informe de cierre" |
 
 ### Qué hace la IA y qué haces tú
@@ -119,8 +129,11 @@ Detalle, instalación manual y solución de problemas en [`docs/INSTALACION-SKIL
 |---|---|
 | Barre los portales y lee las descripciones completas | Defines tu perfil, tus familias de cargo y tus no negociables |
 | Clasifica el calce y marca los gaps | Decides cuáles postular |
-| Adapta el CV con tu material real, sin inventar | Revisas el PDF y confirmas que es verdad |
-| Redacta correos y respuestas de formularios | Envías tú, y avisas cuando lo hiciste |
+| Adapta el CV a cada cargo con tu material real, sin inventar | Revisas el PDF y confirmas que es verdad |
+| Propone sumar al maestro lo nuevo que aparece en cada postulación | Apruebas qué entra al maestro |
+| Arma el playbook cuando le avisas que tienes entrevista | Lo lees antes de entrar |
+| Redacta correos y respuestas de formularios con tu perfil y tu ancla de renta | Envías tú, y avisas cuando lo hiciste |
+| Propone subir tu piso cuando un proceso confirma una renta más alta | Decides tu número |
 | Calcula métricas de la entrevista desde la transcripción | Grabas con consentimiento de los demás participantes y verificas las citas |
 | Propone máximo dos correcciones | Las practicas |
 | Arma el embudo desde tu tracker | Mantienes el tracker al día |
@@ -157,7 +170,8 @@ cp perfil.ejemplo.md      ../mi-busqueda/perfil.md
 cp portales.ejemplo.md    ../mi-busqueda/portales.md
 cp portales.ejemplo.json  ../mi-busqueda/portales.json
 cp tracker.ejemplo.md     ../mi-busqueda/tracker.md
-cp cv/cv-maestro.ejemplo.html ../mi-busqueda/cv-maestro.html
+cp cv/cv-maestro.ejemplo.html ../mi-busqueda/cv-maestro.html      # español
+cp cv/cv-maestro.ejemplo.html ../mi-busqueda/cv-maestro-en.html   # inglés, si postulas en inglés
 ```
 
 **Si de todos modos trabajas dentro del repo, esos archivos están en el `.gitignore` a propósito.** Ahí van tus datos, tu expectativa de renta y tu CV. Eso no se publica nunca.
@@ -170,7 +184,7 @@ cp cv/cv-maestro.ejemplo.html ../mi-busqueda/cv-maestro.html
 
 **`tracker.md`** es la memoria del sistema. Procesos, descartes con motivo, decisiones pendientes, anclas de renta y registro de barridos. Es la fuente del dedup y del embudo.
 
-**`cv-maestro.html`** es la fuente de verdad para generar cada CV adaptado. También sirve al revés, para el **análisis inverso**. En vez de preguntar si calzas con un aviso, preguntar a qué cargos calificas realmente con lo que tienes. Las reglas están en [`cv/ESTANDAR-CV.md`](cv/ESTANDAR-CV.md).
+**`cv-maestro.html` y `cv-maestro-en.html`** son la fuente de verdad para generar cada CV adaptado, uno por idioma. Tienen todo tu material, aunque pasen de 4 páginas, porque la versión que envías se recorta para cada cargo. Se van actualizando con el uso. Lo nuevo y verificado que aparece al postular se agrega a los dos, nunca solo a un CV adaptado. También sirve al revés, para el **análisis inverso**. En vez de preguntar si calzas con un aviso, preguntar a qué cargos calificas realmente con lo que tienes. Las reglas están en [`cv/ESTANDAR-CV.md`](cv/ESTANDAR-CV.md).
 
 ---
 
@@ -215,7 +229,7 @@ applyos/
 │  ├─ cv-maestro.ejemplo.html   plantilla de CV compatible con filtros ATS
 │  └─ ESTANDAR-CV.md            tailoring, palabras clave sin mentir, formato y análisis inverso
 ├─ entrevistas/
-│  ├─ PREPARACION.md            qué hacer antes de cada entrevista
+│  ├─ PREPARACION.md            qué hacer antes de cada entrevista y cómo se arma el playbook
 │  ├─ GRABACION.md              grabar sin ser admin de la reunión, y transcribir
 │  ├─ EVALUACION.md             cómo evaluarte después, con métricas duras
 │  └─ LECCIONES-ENTREVISTAS.ejemplo.md   tus patrones acumulados

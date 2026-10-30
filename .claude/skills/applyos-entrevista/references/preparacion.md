@@ -85,6 +85,15 @@ Reglas prácticas:
 
 **Da un número, no un rango.** Un rango se lee siempre por el extremo bajo.
 
+**Pregunta por el presupuesto y por el mercado.** Sobre todo en la primera conversación con el reclutador, que es quien más ve el mercado. Preguntas que funcionan:
+- "¿Tienen un rango definido para este cargo?"
+- "¿El presupuesto está pensado para un perfil más junior o más senior?"
+- "¿Cómo están viendo las rentas para este tipo de rol en otros procesos?"
+
+Muchos no lo van a decir, y está bien. Los que sí, sobre todo cuando les gustó tu perfil, te dan el dato real de tu mercado. Anótalo en la tabla de anclas del tracker apenas cortes.
+
+**Si el rango que te dan está por sobre tu ancla, tu ancla estaba baja.** Súbela para ese cargo y para los siguientes de la misma familia.
+
 ---
 
 ## Logística, 10 minutos antes
