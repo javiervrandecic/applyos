@@ -11,6 +11,7 @@ Convierte el tracker en números y decisiones. No inventa datos: lo que no está
 
 1. Lee `~/.applyos/config.json` para ubicar el tracker y el dashboard. Si no existe, pregunta dónde está el tracker.
 2. Lee `tracker.md` completo. **Recuenta las etapas desde las tablas, no desde el resumen**. Si difieren, se arregla el conteo, no el dashboard.
+3. Lee las últimas filas de "Registro de sesiones" en `tracker.md` para saber dónde quedó la persona. Al terminar, agrega una fila con fecha y hora, qué se hizo y qué queda pendiente.
 
 ## Pasos
 

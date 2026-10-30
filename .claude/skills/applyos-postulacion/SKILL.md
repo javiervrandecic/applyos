@@ -12,6 +12,7 @@ Parte de un aviso que ya pasó por `applyos-busqueda`. Deja todo listo y registr
 1. Lee `~/.applyos/config.json` (rutas de los CV maestros en español e inglés, perfil y tracker). Si no existe, pregunta dónde están.
 2. Lee `perfil.md`, el CV maestro y `references/estandar-cv.md` completo, antes de generar nada.
 3. Si no hay CV maestro, ofrece partir de `assets/cv-maestro.ejemplo.html` y pide los datos reales a la persona. No inventes experiencia.
+4. Lee las últimas filas de "Registro de sesiones" en `tracker.md` para saber dónde quedó la persona. Al terminar, agrega una fila con fecha y hora, qué se hizo y qué queda pendiente.
 
 ## Pasos
 

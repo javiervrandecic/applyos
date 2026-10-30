@@ -13,6 +13,7 @@ Encuentra avisos y decide si valen la pena leyendo el contenido, nunca el títul
 2. Lee `perfil.md`, `portales.md` (y `portales.json` para los scripts) y `tracker.md` completos. Sin perfil el barrido es ruido. Sin tracker vuelve a mostrar lo ya visto.
 3. Si falta alguno, ofrece crearlo desde `assets/` (`perfil.ejemplo.md`, `portales.ejemplo.md`, `portales.ejemplo.json`, `tracker.ejemplo.md`). Pide los datos en una sola tanda de preguntas.
 4. Abre la sección "Registro de mejoras" de `references/metodologia-completa.md` y aplica lo pendiente.
+5. Lee las últimas filas de "Registro de sesiones" en `tracker.md` para saber dónde quedó la persona. Al terminar, agrega una fila con fecha y hora, qué se hizo y qué queda pendiente.
 
 ## Pasos
 

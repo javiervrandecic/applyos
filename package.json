@@ -1,6 +1,6 @@
 {
   "name": "applyos",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Sistema de busqueda de empleo asistido por IA. Barre portales, analiza el calce leyendo la descripcion completa en vez del titulo, y reporta el embudo etapa por etapa.",
   "type": "commonjs",
   "engines": {

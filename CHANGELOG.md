@@ -2,6 +2,13 @@
 
 Historia de versiones de applyOS. Las fechas son de publicación.
 
+## 1.2.3 · 2026-10-30
+
+### Documentación y skills
+- Sección nueva en el README, "Dónde queda todo". La carpeta de búsqueda es la base del sistema, qué guarda cada archivo y que se puede abrir en Obsidian.
+- El tracker de ejemplo suma "Registro de sesiones", una bitácora de cada vez que se trabaja con el sistema.
+- Las cuatro skills leen ese registro al empezar, para saber dónde quedó la persona, y agregan una fila al terminar.
+
 ## 1.2.2 · 2026-10-30
 
 ### Documentación y skills

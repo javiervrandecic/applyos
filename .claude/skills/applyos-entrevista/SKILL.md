@@ -11,6 +11,7 @@ Dos partes. La parte 1 prepara. La parte 2 evalúa con datos, no con la sensaci�
 
 1. Lee `~/.applyos/config.json` para ubicar perfil, CV maestro, tracker, carpeta de entrevistas y grabaciones. Si no existe, pregunta.
 2. Lee **completo** el archivo de lecciones de la persona (`entrevistas/LECCIONES-ENTREVISTAS.md`). Si no existe, créalo desde `references/lecciones.ejemplo.md`.
+3. Lee las últimas filas de "Registro de sesiones" en `tracker.md` para saber dónde quedó la persona. Al terminar, agrega una fila con fecha y hora, qué se hizo y qué queda pendiente.
 
 ## Parte 1. Preparar (antes de la entrevista)
 

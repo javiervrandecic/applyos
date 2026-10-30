@@ -186,6 +186,23 @@ cp cv/cv-maestro.ejemplo.html ../mi-busqueda/cv-maestro-en.html   # inglés, si 
 
 **`cv-maestro.html` y `cv-maestro-en.html`** son la fuente de verdad para generar cada CV adaptado, uno por idioma. Tienen todo tu material, aunque pasen de 4 páginas, porque la versión que envías se recorta para cada cargo. Se van actualizando con el uso. Lo nuevo y verificado que aparece al postular se agrega a los dos, nunca solo a un CV adaptado. También sirve al revés, para el **análisis inverso**. En vez de preguntar si calzas con un aviso, preguntar a qué cargos calificas realmente con lo que tienes. Las reglas están en [`cv/ESTANDAR-CV.md`](cv/ESTANDAR-CV.md).
 
+## Dónde queda todo
+
+Tu carpeta de búsqueda es la base del sistema. No hay base de datos ni servicio en la nube. Todo queda en archivos de texto en tu computador, y cada skill lee y escribe ahí.
+
+| Archivo o carpeta | Qué guarda |
+|---|---|
+| `perfil.md` | Quién eres, qué buscas y tus no negociables |
+| `tracker.md` | Cada cargo tocado, procesos, descartes con motivo, anclas de renta, barridos y sesiones |
+| `cv/` | Tus maestros en español e inglés y cada CV adaptado que enviaste |
+| `barridos/` | El resultado de cada barrido, para compararlo con el anterior |
+| `entrevistas/` | Los playbooks, las evaluaciones y tus lecciones de entrevistas |
+| `dashboard/` | El embudo generado desde el tracker |
+
+Así el sistema no parte de cero en cada sesión. Sabe qué ya viste, a qué postulaste, cuánto pediste y en qué fallaste la última vez.
+
+Como todo es Markdown, puedes abrir la carpeta en [Obsidian](https://obsidian.md) y navegarla con búsqueda y enlaces entre notas. Es opcional, el sistema funciona igual sin él. Respáldala como respaldas cualquier carpeta importante, pero no la subas a un repo público.
+
 ---
 
 ## Uso

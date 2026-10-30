@@ -91,3 +91,15 @@ Obligatorio, incluso para un chequeo rápido de un solo portal. Si no queda acá
 | 12-03-2026 10:40 | Get on Board (85 únicos, 14 términos, todos hasta la última página), LinkedIn (6 búsquedas, hasta start=40), portal local | 3 candidatos nuevos, 24 descartados con motivo, 1 pendiente de decisión. Computrabajo dio 403 dos veces, revisado a mano. |
 
 Sirve para tres cosas. Ver si un portal dejó de rendir, detectar cuando un barrido devolvió sospechosamente poco (casi siempre significa que algo se rompió y no que el mercado se secó), y calcular qué portal **descubre** más calces, que no es lo mismo que cuál convierte.
+
+---
+
+## Registro de sesiones
+
+Una línea por cada vez que trabajas con el sistema, aunque no haya sido un barrido. Una postulación, un playbook, una evaluación o un cambio de ancla. Es tu bitácora de la búsqueda.
+
+| Fecha y hora | Qué se hizo | Qué queda pendiente |
+|---|---|---|
+| 14-03-2026 18:20 | Playbook para Beta Seguros, entrevista 1. Evaluación hecha después con la grabación. | Mandar agradecimiento a Nombre Apellido el 15-03 |
+
+Cuando pasan semanas, esto es lo que te deja retomar sin preguntarte qué estabas haciendo. Y si usas Claude Code, la skill lo lee al empezar para saber dónde quedaste.
